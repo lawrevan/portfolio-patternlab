@@ -25,18 +25,18 @@
     "paths": {
         "source": {
             "root": "./source/",
-            "app": "./source/app/",
+            "app": "./source/_app/",
             "patterns": "./source/patterns/",
-            "data": "./source/data/",
-            "meta": "./source/meta/",
-            "annotations": "./source/annotations/",
+            "data": "./source/patternlab-specific/data/",
+            "meta": "./source/patternlab-specific/meta/",
+            "annotations": "./source/patternlab-specific/annotations/",
             "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
             "patternlabFiles":
                 "./node_modules/styleguidekit-mustache-default/views/",
-            "js": "./source/js/",
-            "images": "./source/images/",
-            "fonts": "./source/fonts/",
-            "css": "./source/css/"
+            "js": "./source/assets/scripts/",
+            "images": "./source/assets/images/",
+            "fonts": "./source/assets/fonts/",
+            "css": "./source/assets/styles/"
         },
         "public": {
             "root": "./public/",
@@ -44,10 +44,10 @@
             "data": "./public/styleguide/data/",
             "annotations": "./public/annotations/",
             "styleguide": "./public/styleguide/",
-            "js": "./public/js/",
-            "images": "./public/images/",
-            "fonts": "./public/fonts/",
-            "css": "./public/css/"
+            "js": "./public/assets/scripts/",
+            "images": "./public/assets/images/",
+            "fonts": "./public/assets/fonts/",
+            "css": "./public/assets/styles/"
         }
     },
     "styleGuideExcludes": [],
@@ -91,5 +91,14 @@
         "markupOnly": ".markup-only"
     },
     "cleanOutputHtml": true,
-    "exportToGraphViz": false
+    "exportToGraphViz": false,
+    "plugins": {
+    "plugin-node-tab": {
+        "enabled": true,
+        "initialized": false,
+        "options": {
+          "tabsToAdd": ["scss"]
+      }
+    }
+  }
 }
