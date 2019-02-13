@@ -74,7 +74,7 @@ module.exports = env => {
           {
             // Copy all web fonts from source to public
             context: resolve(plConfig.paths.source.fonts),
-            from: "./*",
+            from: "./**/*.*",
             to: resolve(plConfig.paths.public.fonts)
           },
           {

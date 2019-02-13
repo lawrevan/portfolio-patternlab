@@ -1,5 +1,5 @@
 import '../styles/app.scss';
-// import '../css/scss/*/*';
+import './vendor/picturefill.min';
 import './fitvids';
 import './init';
 import './modernizr';

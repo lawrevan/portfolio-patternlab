@@ -106,14 +106,6 @@ module.exports = env => {
                     ]
                 },
                 {
-                  test: /\.(jpe?g|png|gif|svg)$/i,
-                  use: [
-                    {
-                      loader: "file-loader"
-                    }
-                  ]
-                },
-                {
                   test: /\.(woff|woff2|eot|ttf|svg)$/,
                   loader: 'url-loader?limit=100000'
                 }

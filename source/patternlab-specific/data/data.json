@@ -54,37 +54,37 @@
     "primaryNav" : [
         {
             "label": "About",
-            "url": "link.pages-about"
+            "url": "link"
         },
         {
             "label": "Blog",
-            "url": "link.pages-blog-index"
+            "url": "link"
         },
         {
             "label": "Contact",
-            "url": "link.pages-contact"
+            "url": "link"
         },
         {
             "label": "Login",
-            "url": "link.pages-login"
+            "url": "link"
         }
     ],
     "footerNav" : [
         {
             "label": "About",
-            "url": "link.pages-about"
+            "url": "link"
         },
         {
             "label": "Blog",
-            "url": "link.pages-blog-index"
+            "url": "link"
         },
         {
             "label": "Contact",
-            "url": "link.pages-contact"
+            "url": "link"
         },
         {
             "label": "Login",
-            "url": "link.pages-login"
+            "url": "link"
         }
     ],
     "url" : "#",
