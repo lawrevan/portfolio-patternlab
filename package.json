@@ -1,0 +1,80 @@
+{
+    "name": "edition-node-webpack",
+    "description": "A pure wrapper around patternlab-node core, the default pattern engine, and supporting frontend assets.",
+    "version": "2.0.2",
+    "dependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.2.3",
+        "@babel/polyfill": "^7.2.5",
+        "@babel/preset-env": "^7.2.3",
+        "@babel/register": "^7.0.0",
+        "autoprefixer": "^9.4.7",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-loader": "^8.0.5",
+        "copy-webpack-plugin": "^4.6.0",
+        "css-loader": "^2.1.0",
+        "event-hooks-webpack-plugin": "^2.1.1",
+        "file-loader": "^3.0.1",
+        "globby": "^8.0.2",
+        "import-glob-loader": "^1.1.0",
+        "mini-css-extract-plugin": "^0.5.0",
+        "node-sass": "^4.11.0",
+        "patternlab-node": "^2.12.0",
+        "postcss-flexbugs-fixes": "^4.1.0",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^7.1.0",
+        "starterkit-mustache-demo": "^4.0.2",
+        "style-loader": "^0.23.1",
+        "styleguidekit-assets-default": "^3.5.2",
+        "styleguidekit-mustache-default": "^3.1.0",
+        "uglifyjs-webpack-plugin": "^2.1.1",
+        "url-loader": "^1.1.2",
+        "webpack": "^4.28.1",
+        "webpack-config-utils": "^2.3.1",
+        "webpack-merge": "^4.2.1"
+    },
+    "repository": "git@github.com:Comcast/patternlab-edition-node-webpack.git",
+    "bugs": "https://github.com/Comcast/patternlab-edition-node-webpack/issues",
+    "author": "Matt Bulfair <Matt_Bulfair@comcast.com>",
+    "contributors": [
+        "Josh Schneider <josh68@gmail.com>",
+        "Paul Wright <paul@paintedbicycle.com>"
+    ],
+    "scripts": {
+        "start": "run-p patternlab:serve",
+        "webpack:version": "webpack --v",
+        "patternlab:build": "webpack --mode=production --env.production",
+        "patternlab:serve": "webpack-dev-server --mode=development --env.development",
+        "patternlab:version": "node patternlab.js version",
+        "patternlab:help": "node patternlab.js help",
+        "patternlab:patternsonly": "node patternlab.js patternsonly",
+        "patternlab:liststarterkits": "node patternlab.js liststarterkits",
+        "patternlab:loadstarterkit": "node patternlab.js loadstarterkit",
+        "patternlab:installplugin": "node patternlab.js installplugin",
+        "postinstall": "node scripts/postinstall.js",
+        "diagnosis": "run-s patternlab:version webpack:version patternlab:build patternlab:serve"
+    },
+    "license": "Apache-2.0",
+    "engines": {
+        "node": ">=5.0"
+    },
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "useBuiltIns": "usage"
+                }
+            ]
+        ],
+        "plugins": [
+            "@babel/plugin-proposal-class-properties"
+        ]
+    },
+    "devDependencies": {
+        "npm-run-all": "^4.1.5",
+        "webpack-cli": "^3.2.1",
+        "webpack-dev-server": "^3.1.14"
+    }
+}
