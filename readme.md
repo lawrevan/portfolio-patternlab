@@ -1,3 +1,10 @@
+# Assemble Base Pattern Library
+
+## Installation
+* Run `npm install` to install all required packages
+* Run `npm run patternlab:serve` to run the project locally
+* Run `npm run patternlab:build` to build production 
+
 [![Apache V2 License](http://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/Comcast/patternlab-edition-node-webpack/blob/master/LICENSE)
 
 # Pattern Lab Node - Webpack Edition
