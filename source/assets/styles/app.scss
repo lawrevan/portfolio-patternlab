@@ -11,9 +11,9 @@
 // // Buildkit specific, not used for the site
 @import "buildkit/_pattern-lab.scss";
 
-// h1 {
-//   color: blue;
-//   &:hover {
-//     color: $color-red;
-//   }
-// }
+h1 {
+  color: blue;
+  &:hover {
+    color: $color-red;
+  }
+}
