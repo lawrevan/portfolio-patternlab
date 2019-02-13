@@ -13,7 +13,7 @@ _Note: You must have all of the prerequisites first_
 1.  In a terminal window, navigate to the downloaded directory
     > `cd path/to/pattern-lab-starter`
 1.  Install required packages
-    > `npm run install`
+    > `npm install`
 1.  Show Patternlab in a Webbrowser
     > `npm run patternlab:serve`
 1.  Build production
