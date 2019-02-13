@@ -11,7 +11,7 @@ const patternEngines = require("patternlab-node/core/lib/pattern_engines");
 const merge = require("webpack-merge");
 const customization = require(`${plConfig.paths.source.app}/webpack.app.js`);
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = env => {
   const { ifProduction, ifDevelopment } = getIfUtils(env);
 
@@ -55,7 +55,7 @@ module.exports = env => {
       plugins: removeEmpty([
         ifDevelopment(
           new webpack.HotModuleReplacementPlugin(),
-          new webpack.NamedModulesPlugin()
+          new webpack.NamedModulesPlugin(),
         ),
         // Remove with PL Core 3.x
         new CopyWebpackPlugin([
@@ -98,6 +98,7 @@ module.exports = env => {
             flatten: true
           }
         ]),
+
         ifDevelopment(
           new EventHooksPlugin({
             afterEmit: function(compilation) {
@@ -145,7 +146,10 @@ module.exports = env => {
 
             patternlab.build(() => {}, cleanPublic);
           }
-        })
+        }),
+        ifProduction(
+          new CleanWebpackPlugin(['public'])
+        )
       ]),
       devServer: {
         contentBase: resolve(__dirname, plConfig.paths.public.root),

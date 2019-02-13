@@ -15,6 +15,7 @@ const globby = require("globby");
 const plConfig = require("../../patternlab-config.json");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+
 module.exports = env => {
     const { ifProduction, ifDevelopment } = getIfUtils(env);
     const appNamespace = plConfig.app.namespace
@@ -54,7 +55,7 @@ module.exports = env => {
             }),
             new webpack.DefinePlugin({
                 NAMESPACE: appNamespace
-            })
+            }),
         ],
         devtool: 'source-map',
         module: {
@@ -71,17 +72,14 @@ module.exports = env => {
                         },
                         {
                             loader: "css-loader",
-                            // options: {
-                            //     minimize: ifProduction()
-                            // }
                             options: {
-                              sourceMap: true
+                              sourceMap: ifDevelopment(),
                             }
                         },
                         {
                             loader: "postcss-loader",
                             options: {
-                                sourceMap: true,
+                                sourceMap: ifDevelopment(),
                                 plugins: loader => [
                                     // eslint-disable-line no-unused-vars
                                     require("autoprefixer"),
@@ -92,13 +90,13 @@ module.exports = env => {
                         {
                             loader: "sass-loader",
                             options: {
-                              sourceMap: true,
+
                                 precision: 3,
-                                // sourceMap: ifDevelopment(),
-                                // outputStyle: ifProduction(
-                                //     "compressed",
-                                //     "expanded"
-                                // ),
+                                sourceMap: ifDevelopment(),
+                                outputStyle: ifProduction(
+                                    "compressed",
+                                    "expanded"
+                                ),
                                 data: appNamespace
                             }
                         },
