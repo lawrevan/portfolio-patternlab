@@ -36,7 +36,7 @@ module.exports = env => {
       },
       output: {
         path: resolve(__dirname, plConfig.paths.public.root),
-        filename: "js/[name].js"
+        filename: "assets/scripts/[name].js"
       },
       optimization: {
         minimizer: [new UglifyJsPlugin(plConfig.app.uglify)],

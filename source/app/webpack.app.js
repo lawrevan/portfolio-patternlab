@@ -49,7 +49,7 @@ module.exports = env => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: "css/[name].css",
+                filename: "assets/styles/[name].css",
                 disable: ifDevelopment()
             }),
             new webpack.DefinePlugin({
