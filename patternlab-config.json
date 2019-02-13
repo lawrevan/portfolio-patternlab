@@ -1,103 +1,125 @@
 {
-    "app": {
-        "webpackDevServer": {
-            "url": "http://localhost",
-            "port": 3000,
-            "watchContentBase": true,
-            "watchOptions": {
-                "aggregateTimeout": 500,
-                "ignored": [],
-                "info-verbosity": "verbose"
-            }
-        },
-        "webpackMerge": {
-            "entry": "replace"
-        },
-        "uglify": {
-            "sourceMap": false,
-            "parallel": true,
-            "uglifyOptions": {
-                "mangle": false
-            }
-        },
-        "namespace": ""
+  "app": {
+    "webpackDevServer": {
+      "url": "http://localhost",
+      "port": 3000,
+      "watchContentBase": true,
+      "watchOptions": {
+        "aggregateTimeout": 500,
+        "ignored": [],
+        "info-verbosity": "verbose"
+      }
     },
-    "paths": {
-        "source": {
-            "root": "./source/",
-            "app": "./source/_app/",
-            "patterns": "./source/patterns/",
-            "data": "./source/patternlab-specific/data/",
-            "meta": "./source/patternlab-specific/meta/",
-            "annotations": "./source/patternlab-specific/annotations/",
-            "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
-            "patternlabFiles":
-                "./node_modules/styleguidekit-mustache-default/views/",
-            "js": "./source/assets/scripts/",
-            "images": "./source/assets/images/",
-            "fonts": "./source/assets/fonts/",
-            "css": "./source/assets/styles/"
-        },
-        "public": {
-            "root": "./public/",
-            "patterns": "./public/patterns/",
-            "data": "./public/styleguide/data/",
-            "annotations": "./public/annotations/",
-            "styleguide": "./public/styleguide/",
-            "js": "./public/assets/scripts/",
-            "images": "./public/assets/images/",
-            "fonts": "./public/assets/fonts/",
-            "css": "./public/assets/styles/"
-        }
+    "webpackMerge": {
+      "entry": "replace"
     },
-    "styleGuideExcludes": [],
-    "defaultPattern": "all",
-    "defaultShowPatternInfo": false,
-    "cleanPublic": true,
-    "patternExtension": "mustache",
-    "debug": false,
-    "ishControlsHide": {
-        "s": false,
-        "m": false,
-        "l": false,
-        "full": false,
-        "random": false,
-        "disco": false,
-        "hay": true,
-        "mqs": false,
-        "find": false,
-        "views-all": false,
-        "views-annotations": false,
-        "views-code": false,
-        "views-new": false,
-        "tools-all": false,
-        "tools-docs": false
+    "uglify": {
+      "sourceMap": false,
+      "parallel": true,
+      "uglifyOptions": {
+        "mangle": false
+      }
     },
-    "ishViewportRange": {
-        "s": [240, 500],
-        "m": [768, 768],
-        "l": [800, 2600]
+    "namespace": ""
+  },
+  "paths": {
+    "source": {
+      "root": "./source/",
+      "app": "./source/_app/",
+      "patterns": "./source/patterns/",
+      "data": "./source/patternlab-specific/data/",
+      "meta": "./source/patternlab-specific/meta/",
+      "annotations": "./source/patternlab-specific/annotations/",
+      "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
+      "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
+      "js": "./source/assets/scripts/",
+      "images": "./source/assets/images/",
+      "fonts": "./source/assets/fonts/",
+      "css": "./source/assets/styles/"
     },
-    "patternStateCascade": ["inprogress", "inreview", "complete"],
-    "patternStates": {},
-    "patternExportPatternPartials": [],
-    "patternExportDirectory": "./pattern_exports/",
-    "cacheBust": true,
-    "starterkitSubDir": "dist",
-    "starterkitPostInstallClean": false,
-    "outputFileSuffixes": {
-        "rendered": ".rendered",
-        "rawTemplate": "",
-        "markupOnly": ".markup-only"
-    },
-    "cleanOutputHtml": true,
-    "exportToGraphViz": false,
-    "plugins": {
+    "public": {
+      "root": "./public/",
+      "patterns": "./public/patterns/",
+      "data": "./public/styleguide/data/",
+      "annotations": "./public/annotations/",
+      "styleguide": "./public/styleguide/",
+      "js": "./public/assets/scripts/",
+      "images": "./public/assets/images/",
+      "fonts": "./public/assets/fonts/",
+      "css": "./public/assets/styles/"
+    }
+  },
+  "styleGuideExcludes": [
+    "templates",
+    "pages"
+  ],
+  "theme": {
+    "color": "dark",
+    "density": "compact",
+    "layout": "horizontal"
+  },
+  "defaultPattern": "all",
+  "defaultShowPatternInfo": false,
+  "cleanPublic": true,
+  "patternExtension": "mustache",
+  "debug": false,
+  "ishControlsHide": {
+    "s": false,
+    "m": false,
+    "l": false,
+    "full": false,
+    "random": true,
+    "disco": true,
+    "hay": true,
+    "mqs": false,
+    "find": false,
+    "views-all": false,
+    "views-annotations": false,
+    "views-code": false,
+    "views-new": false,
+    "tools-all": false,
+    "tools-docs": false
+  },
+  "ishViewportRange": {
+    "s": [
+      480,
+      480
+    ],
+    "m": [
+      1024,
+      1024
+    ],
+    "l": [
+      1920,
+      1920
+    ]
+  },
+  "patternStateCascade": [
+    "inprogress",
+    "inreview",
+    "complete"
+  ],
+  "patternStates": {},
+  "patternExportPatternPartials": [],
+  "patternExportDirectory": "./pattern_exports/",
+  "cacheBust": true,
+  "starterkitSubDir": "dist",
+  "starterkitPostInstallClean": false,
+  "outputFileSuffixes": {
+    "rendered": ".rendered",
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  },
+  "cleanOutputHtml": true,
+  "exportToGraphViz": false,
+  "plugins": {
     "plugin-node-tab": {
-        "enabled": true,
-        "initialized": false,
-        "options": {
-          "tabsToAdd": ["scss"]
+      "enabled": true,
+      "initialized": false,
+      "options": {
+        "tabsToAdd": [
+          "scss"
+        ]
       }
     }
   }
