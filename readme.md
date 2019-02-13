@@ -3,7 +3,22 @@
 ## Installation
 * Run `npm install` to install all required packages
 * Run `npm run patternlab:serve` to run the project locally
-* Run `npm run patternlab:build` to build production 
+* Run `npm run patternlab:build` to build production
+
+## Quickstart Guide
+
+_Note: You must have all of the prerequisites first_
+
+1.  Download the `.zip` or fork this repository, then clone it locally.
+    > `git clone git@github.com:YOURGROUP/pattern-lab-starter.git`
+1.  In a terminal window, navigate to the downloaded directory
+    > `cd path/to/pattern-lab-starter`
+1.  Install required packages
+    > `npm run install`
+1.  Show Patternlab in a Webbrowser
+    > `npm run patternlab:serve`
+1.  Build production
+    > `npm run patternlab:build`
 
 [![Apache V2 License](http://img.shields.io/badge/license-Apache%20V2-blue.svg)](https://github.com/Comcast/patternlab-edition-node-webpack/blob/master/LICENSE)
 
