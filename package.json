@@ -1,6 +1,6 @@
 {
-    "name": "edition-node-webpack",
-    "description": "A pure wrapper around patternlab-node core, the default pattern engine, and supporting frontend assets.",
+    "name": "assemble-patterns",
+    "description": "Patternlab template with webpack",
     "version": "2.0.2",
     "dependencies": {
         "@babel/cli": "^7.2.3",
@@ -34,13 +34,8 @@
         "webpack-config-utils": "^2.3.1",
         "webpack-merge": "^4.2.1"
     },
-    "repository": "git@github.com:Comcast/patternlab-edition-node-webpack.git",
-    "bugs": "https://github.com/Comcast/patternlab-edition-node-webpack/issues",
-    "author": "Matt Bulfair <Matt_Bulfair@comcast.com>",
-    "contributors": [
-        "Josh Schneider <josh68@gmail.com>",
-        "Paul Wright <paul@paintedbicycle.com>"
-    ],
+    "repository": "https://github.com/lawrevan/pattern-lab-starter.git",
+    "author": "Larry Evans",
     "scripts": {
         "start": "run-p patternlab:serve",
         "webpack:version": "webpack --v",
