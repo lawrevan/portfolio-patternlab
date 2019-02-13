@@ -25,11 +25,11 @@
     "paths": {
         "source": {
             "root": "./source/",
-            "app": "./source/app/",
+            "app": "./source/_app/",
             "patterns": "./source/patterns/",
-            "data": "./source/data/",
-            "meta": "./source/meta/",
-            "annotations": "./source/annotations/",
+            "data": "./source/patternlab-specific/data/",
+            "meta": "./source/patternlab-specific/meta/",
+            "annotations": "./source/patternlab-specific/annotations/",
             "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
             "patternlabFiles":
                 "./node_modules/styleguidekit-mustache-default/views/",
@@ -91,5 +91,14 @@
         "markupOnly": ".markup-only"
     },
     "cleanOutputHtml": true,
-    "exportToGraphViz": false
+    "exportToGraphViz": false,
+    "plugins": {
+    "plugin-node-tab": {
+        "enabled": true,
+        "initialized": false,
+        "options": {
+          "tabsToAdd": ["scss"]
+      }
+    }
+  }
 }
