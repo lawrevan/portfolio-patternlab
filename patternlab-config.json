@@ -118,9 +118,7 @@
       "initialized": false,
       "options": {
         "tabsToAdd": [
-          "scss",
-          "json",
-          "js"
+          "scss"
         ]
       }
     }

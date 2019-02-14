@@ -1,4 +1,5 @@
 import '../styles/app.scss';
+import './data-js';
 import './vendor/picturefill.min';
 import './fitvids';
 import './init';
