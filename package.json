@@ -23,6 +23,7 @@
         "plugin-node-tab": "^2.0.2",
         "postcss-flexbugs-fixes": "^4.1.0",
         "postcss-loader": "^3.0.0",
+        "prismjs": "^1.15.0",
         "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
         "styleguidekit-assets-default": "^3.5.2",
