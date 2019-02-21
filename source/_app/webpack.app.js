@@ -106,8 +106,16 @@ module.exports = env => {
                     ]
                 },
                 {
-                  test: /\.(woff|woff2|eot|ttf|svg)$/,
-                  loader: 'url-loader?limit=100000'
+                  test: /\.svg$/,
+                  loader: 'svg-url-loader',
+                  options: {
+                    noquotes: true,
+                    name: '[name].[ext]'
+                  }
+                },
+                {
+                  test: /\.(woff|woff2|eot|ttf|jpg?g|png|gif)$/,
+                  loader: 'url-loader?100000'
                 }
             ]
         }

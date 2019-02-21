@@ -59,7 +59,7 @@
     "layout": "horizontal"
   },
   "defaultPattern": "all",
-  "defaultShowPatternInfo": false,
+  "defaultShowPatternInfo": true,
   "cleanPublic": true,
   "patternExtension": "mustache",
   "debug": false,
