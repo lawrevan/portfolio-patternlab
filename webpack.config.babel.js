@@ -84,6 +84,13 @@ module.exports = env => {
             to: resolve(plConfig.paths.public.css)
           },
           {
+            // Copy JS
+            context: resolve(plConfig.paths.source.js),
+            from: "./**/*",
+            to: resolve(plConfig.paths.public.js),
+            ignore: ["app.js"]
+          },
+          {
             // Styleguide Copy everything but css
             context: resolve(plConfig.paths.source.styleguide),
             from: "./**/*",
