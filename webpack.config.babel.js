@@ -155,7 +155,7 @@ module.exports = env => {
           }
         }),
         ifProduction(
-          new CleanWebpackPlugin(['public'])
+          new CleanWebpackPlugin(['public','pattern_exports'])
         )
       ]),
       devServer: {

@@ -100,7 +100,7 @@
     "complete"
   ],
   "patternStates": {},
-  "patternExportPatternPartials": [],
+  "patternExportPatternPartials": ["templates-homepage"],
   "patternExportDirectory": "./pattern_exports/",
   "cacheBust": true,
   "starterkitSubDir": "dist",
