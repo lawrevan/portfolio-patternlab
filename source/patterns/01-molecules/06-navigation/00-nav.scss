@@ -1,0 +1,26 @@
+.m-nav {
+
+}
+
+.m-nav__list {
+
+}
+
+.m-nav__list--level-1 {
+
+}
+
+.m-nav__list--level-2 {
+
+}
+
+.m-nav__item {
+  padding: 0;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+
+  &:before {
+    content: '';
+  }
+}

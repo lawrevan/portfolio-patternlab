@@ -82,7 +82,9 @@ module.exports = env => {
                                 sourceMap: ifDevelopment(),
                                 plugins: loader => [
                                     // eslint-disable-line no-unused-vars
-                                    require("autoprefixer"),
+                                    require('autoprefixer')({
+                                      'browsers': ['> 1%', 'last 2 versions']
+                                    }),
                                     require("postcss-flexbugs-fixes")
                                 ]
                             }
