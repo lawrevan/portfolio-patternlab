@@ -9,6 +9,5 @@ hamburgerBtn3.addEventListener('click', toggleClass);
 hamburgerBtn4.addEventListener('click', toggleClass);
 
 function toggleClass() {
-  console.log('clicked');
   this.classList.toggle('js-a-btn--menu-open');
 }
