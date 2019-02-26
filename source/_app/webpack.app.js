@@ -80,7 +80,8 @@ module.exports = env => {
                             loader: "postcss-loader",
                             options: {
                                 sourceMap: ifDevelopment(),
-                                plugins: loader => [
+                                ident: 'postcss',
+                                plugins: [
                                     // eslint-disable-line no-unused-vars
                                     require('autoprefixer')({
                                       'browsers': ['> 1%', 'last 2 versions']
