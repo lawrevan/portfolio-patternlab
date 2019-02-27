@@ -1,0 +1,12 @@
+.c-header-wrapper {
+  overflow: hidden;
+  position: relative;
+  background-color: $header-bg-color;
+  @include box-shadow(0 0 10px rgba(00,00,00,0.25));
+}
+
+.c-header {
+  position: absolute;
+  top: 0;
+  z-index: 15;
+}

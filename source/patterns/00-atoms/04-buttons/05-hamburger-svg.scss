@@ -1,0 +1,43 @@
+.a-btn--hamburger {
+  padding: 0;
+  cursor: pointer;
+  
+  svg {
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+    transform: translate3d(0, 0, 0);
+    left: calc(100% - 20px);
+    position: absolute;
+
+    path {
+      fill: none;
+      transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25), stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+      stroke-width: 40px;
+      stroke-linecap: round;
+      stroke: $color-primary;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  &__top,
+  &__bottom {
+    stroke-dasharray: 240px 950px;
+  }
+
+  &__middle {
+    stroke-dasharray: 240px 240px;
+  }
+}
+
+.js-a-btn--hamburger {
+  .a-btn--hamburger__top,
+  .a-btn--hamburger__bottom {
+    stroke-dashoffset: -650px;
+  }
+
+  .a-btn--hamburger__middle {
+    stroke-dashoffset: -115px;
+    stroke-dasharray: 1px 220px;
+  }
+}
