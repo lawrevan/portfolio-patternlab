@@ -62,3 +62,29 @@
         font-size: ($desktop / $font-size-base) * 1rem;
     }
 }
+
+@mixin opacity ($opacity) {
+  opacity: $opacity;
+}
+
+@mixin border-radius ($radius) {
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin box-shadow ($string) {
+  box-shadow: $string;
+}
+
+@mixin text-shadow ($string) {
+  text-shadow: $string;
+}
+
+@mixin transition($duration) {
+  transition: all $duration ease;
+}
+
+@mixin animated($duration) {
+  animation-duration: $duration;
+  animation-fill-mode: both;
+}

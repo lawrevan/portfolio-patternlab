@@ -1,12 +1,9 @@
 <nav class="m-nav">
-    <ul class="m-nav__list">
-        {{#navigation}}
-            <li class="m-nav__item"><a href="{{href}}">{{level-1}}</a></li>
-            <!-- <ul class="m-nav__level-2">
-        {{#level-2}}
-          <li><a href="{{href}}">{{level-1}}</a></li>
-        {{/level-2}}
-      </ul> -->
-        {{/navigation}}
-    </ul>
+  <ul class="m-nav__list">
+    {{#navigation}}
+      <li class="m-nav__item">
+        <a class="m-nav__link" href="{{href}}"><span>{{level-1}}</span></a>
+      </li>
+    {{/navigation}}
+  </ul>
 </nav>
