@@ -1,3 +1,231 @@
+main {
+  position: relative;
+  z-index: $z-index-base;
+  height: auto;
+  min-height: 100vh;
+  margin-bottom: 37rem;
+  background-color: $color-brand-primary;
+
+  section {
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    //// TODO:
+    background-size: cover;
+    background-size: 375px auto;
+    background-position: top center;
+  }
+}
+
+@media (min-width: $bp-desktop-sm) {
+  main {
+    section {
+      height: 100vh;
+      min-height: 800px;
+      background-size: 815px auto;
+      background-position: center center;
+    }
+  }
+}
+
 .c-footer {
-	
+  width: 100%;
+  z-index: -2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 37rem;
+  background-color: $color-brand-secondary;
+
+  &__content {
+	  @extend %container;
+    padding-top: 5rem;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: calculateRem(18px);
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: calculateRem(18px);
+  }
+
+  &__description {
+    color: $color-gray;
+    max-width: 40rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  &__copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-brand-primary;
+  }
+
+  &__row {
+    @extend %container;
+    padding-top: calculateRem(30px);
+    padding-bottom: calculateRem(30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__column {
+    padding-top: calculateRem(15px);
+    padding-bottom: calculateRem(15px);
+    color: $color-white;
+
+    span {
+      @extend %gradient-text;
+    }
+  }
+
+  &__link {
+    &--icon {
+      text-decoration: none;
+      font-size: 1.5rem;
+      padding: calculateRem(5px) calculateRem(10px);
+
+      &:before {
+        @extend %gradient-text--bottom;
+      }
+
+      &:hover,
+      &:focus {
+        [class^="fa"] {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      [class^="fa"] {
+        &:before {
+          position: absolute;
+          top: 0.312rem;
+          left: 0.625rem;
+          overflow: hidden;
+          width: 0;
+          white-space: nowrap;
+          @extend %gradient-text--top;
+          transition: width 0.4s ease-out;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  main {
+    margin-bottom: 31rem;
+  }
+
+  .c-footer {
+    height: 31rem;
+
+    &__content {
+      padding-top: 6rem;
+    }
+
+    &__row {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}
+
+
+.c-designer {
+  background-image: url('../../assets/images/home/processor_large.jpg');
+  background-color: $color-brand-secondary;
+}
+
+.c-developer {
+  background-image: url('../../assets/images/home/processor_break_large.jpg');
+  background-color: $color-brand-primary;
+}
+
+/// split
+
+.split {
+  display: flex;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  padding: 5rem 0;
+  position: absolute;
+  bottom: 0;
+
+  &--designer {
+    background: rgba(26,26,26, 0.55);
+  }
+
+  &--developer {
+    background: rgba(16, 16, 16, 0.55);
+  }
+
+  &__content {
+    width: 86%;
+    max-width: 36rem;
+    margin: 0 auto;
+    align-self: center;
+    height: auto;
+
+    p {
+      letter-spacing: -.01em;
+      font-family: $font-sf-text;
+      font-weight: 500;
+      color: $color-gray;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-family: $font-sf-display;
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .split {
+
+  }
+}
+
+@media (min-width: $bp-desktop-sm) {
+  .split {
+    height: 100vh;
+    padding: 0;
+    width: 50%;
+    position: relative;
+
+    &--designer {
+      float: right;
+      background: rgba(26,26,26, 0.55);
+    }
+
+    &--developer {
+      float: left;
+      background: rgba(16,16,16,.55);
+    }
+
+    &__content {
+      width: 80%;
+    }
+  }
+
 }

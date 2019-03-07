@@ -6,3 +6,52 @@
 		max-width: 400px;
 	}
 }
+
+.m-logo-link {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  padding: 0;
+  max-width: 200px;
+  top: 30px;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (min-width: $bp-mobile) {
+  .m-logo-link {
+    max-width: 250px;
+    top: 25px;
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .m-logo-link {
+    position: relative;
+    flex-basis: 40%;
+    width: 40%;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    transform: none;
+
+    img {
+      max-width: 260px;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .m-logo-link {
+    flex-basis: 40%;
+    width: 40%;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

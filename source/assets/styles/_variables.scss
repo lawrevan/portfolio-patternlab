@@ -6,10 +6,14 @@
 $color-primary: #E86D20;
 $color-secondary: #000;
 
+$color-brand-primary: #101010;
+$color-brand-secondary: #1a1a1a;
+$color-brand-tertiary: #38495a;
+
 // Neutral Colors
 $color-white: #FFF;
 $color-black: #000;
-$color-gray: #666;
+$color-gray: #CCC;
 $color-light-gray: #F6F6F6;
 
 // Utility Colors
@@ -26,6 +30,8 @@ $color-light: $color-white;
 $font-roboto: 'Roboto', sans-serif;
 $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 
+$font-sf-display: 'SF Pro Display', sans-serif;
+$font-sf-text: 'SF Pro Text', sans-serif;
 
 /*
  * Font Variables
@@ -35,15 +41,15 @@ $font-roboto-condensed: 'Roboto Condensed', sans-serif;
 $font-size-base: 16px;
 
 // Font Families
-$font-family-primary: $font-roboto;
-$font-family-secondary: $font-roboto-condensed;
+$font-family-primary: $font-sf-display;
+$font-family-secondary: $font-sf-text;
 
 // Icon Font Family
 $font-family-icon: 'icomoon';
 
 // Font Weights
 $font-weight-light: 300;
-$font-weight-normal: 400;
+$font-weight-normal: 500;
 $font-weight-bold: 700;
 
 
@@ -51,12 +57,41 @@ $font-weight-bold: 700;
  * Break Points
  */
 
+$bp-mobile: 480px;
 $bp-tablet: 768px;
+$bp-desktop-sm: 960px;
 $bp-desktop: 1024px;
+$bp-desktop-lg: 1440px;
+
+/*
+ * Grid / Layout
+ */
+
+$container-max-width: 1170px;
+
+$page-x-padding: 40px;
+$page-y-padding: 0;
+
+$page-x-padding-mobile: 16px;
+$page-y-padding-mobile: 0;
+
+$grid-gutter-width: 30px;
 
 /*
  * Header
  */
 
-$header-bg-color: #333333;
 $nav-link-color: $color-white;
+
+
+/*
+ * Z-Indexes
+ */
+
+$z-index-behind:  	-10;
+$z-index-base:  	0;
+$z-index-middle:  	5;
+$z-index-front: 	10;
+$z-index-top: 		100;
+$z-index-overlay: 	200;
+$z-index-modal: 	900;

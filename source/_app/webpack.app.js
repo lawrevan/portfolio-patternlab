@@ -117,7 +117,7 @@ module.exports = env => {
                   }
                 },
                 {
-                  test: /\.(woff|woff2|eot|ttf|jpg?g|png|gif)$/,
+                  test: /\.(woff|woff2|eot|ttf|jpg?g|png|gif|otf)$/,
                   loader: 'url-loader?100000'
                 }
             ]

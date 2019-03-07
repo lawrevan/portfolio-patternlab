@@ -1,5 +1,7 @@
 body {
 	font-family: $font-family-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 	em {
 		font-style: italic;
@@ -11,9 +13,5 @@ body {
 
 	&.font-secondary {
 		font-family: $font-family-secondary;
-	}
-
-	a {
-		color: $color-primary;
 	}
 }

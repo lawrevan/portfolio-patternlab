@@ -1,3 +1,41 @@
 * {
 	box-sizing: border-box;
 }
+
+%container {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%gradient-text {
+  background-image: linear-gradient(to bottom, $color-white 40%, $color-brand-tertiary);
+  background-clip: text;
+  color: transparent;
+}
+
+%gradient-text--right {
+  background-image: linear-gradient(to right, $color-white 30%, $color-brand-tertiary);
+  background-clip: text;
+  color: transparent;
+}
+
+%gradient-text--left {
+  background-image: linear-gradient(to left, $color-white 30%, $color-brand-tertiary);
+  background-clip: text;
+  color: transparent;
+}
+
+%gradient-text--top {
+  background-image: linear-gradient(to top, $color-white 50%, $color-brand-secondary);
+  background-clip: text;
+  color: transparent;
+}
+
+%gradient-text--bottom {
+  background-image: linear-gradient(to bottom, $color-white 50%, $color-brand-secondary);
+  background-clip: text;
+  color: transparent;
+}

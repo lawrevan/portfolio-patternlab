@@ -1,3 +1,45 @@
-<header class="c-header">
-	<div class="c-header__logo">{{> molecules-logo-link}}</div>
-</header>
+<div class="c-header-wrapper">
+  <header class="c-header">
+
+    <a class="c-header__hamburger">
+      <ul class="c-header__hamburger-list">
+        <li class="c-header__hamburger-item"></li>
+        <li class="c-header__hamburger-item"></li>
+      </ul>
+    </a>
+    <!--c-header__hamburger-->
+
+    {{> molecules-nav }}
+
+  </header>
+
+  <div class="m-hero-block m-hero-block--middle m-hero-block--center m-hero-block--stars">
+
+    <div class="m-hero-block__stars m-hero-block__stars--1"></div>
+    <div class="m-hero-block__stars m-hero-block__stars--2"></div>
+    <div class="m-hero-block__stars m-hero-block__stars--3"></div>
+
+    <div class='m-hero-block__content'>
+      <h1 class="m-hero-block__headline">Larry Evans</h1>
+      <h1 class="m-hero-block__headline">Front End Web Developer</h1>
+      <p class="m-hero-block__description">Description</p>
+
+      <a class="a-btn a-btn--primary m-hero-block__cta" href="/">Placeholder Btn</a>
+    </div>
+    <!-- <figure class="c-header__figure c-header__figure--mobile-bg">
+      <picture>
+    		{{#breakpointImages}}
+    		<source media="{{desktop}}" srcset="{{imgSrcDesktop}}">
+    		<source media="{{tablet}}" srcset="{{imgSrcTablet}}">
+            <img class="c-header__figure-img" src="{{imgSrcMobile}}" alt="{{imgAlt}}">
+    		{{/breakpointImages}}
+      </picture>
+      <figcaption class="c-header__figure-caption">
+        <span class="c-header__figure-description">{{description}}</span>
+        <h1 class="c-header__figure-title">{{headline}}</h1>
+      </figcaption>
+    </figure> -->
+  </div>
+<!-- m-hero-block--stars -->
+</div>
+<!--c-header-wrapper-->

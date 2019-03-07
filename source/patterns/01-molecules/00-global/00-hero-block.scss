@@ -1,3 +1,7 @@
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100);
+
 .m-hero-block {
 	$this: &;
 	position: relative;
@@ -92,4 +96,90 @@
 			color: $color-light;
 		}
 	}
+
+  &--stars {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, $color-brand-primary 0%, $color-brand-secondary 100%);
+    overflow: hidden;
+    @include transition(0.5s);
+
+    #{$this}__description {
+      color: $color-white;
+    }
+
+    #{$this}__stars {
+      background: transparent;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        background: transparent;
+        top: 2000px;
+      }
+
+      &--1 {
+        width: 1px;
+        height: 1px;
+        box-shadow: $shadows-small;
+        animation: animStar 50s linear infinite;
+
+        &:after {
+          width: 1px;
+          height: 1px;
+          box-shadow: $shadows-small;
+        }
+      }
+
+      &--2 {
+        width: 2px;
+        height: 2px;
+        box-shadow: $shadows-medium;
+        animation: animStar 100s linear infinite;
+
+        &:after {
+          width: 2px;
+          height: 2px;
+          box-shadow: $shadows-medium;
+        }
+      }
+
+      &--3 {
+        width: 3px;
+        height: 3px;
+        box-shadow: $shadows-big;
+        animation: animStar 150s linear infinite;
+
+        &:after {
+          width: 3px;
+          height: 3px;
+          box-shadow: $shadows-big;
+        }
+      }
+    }
+  }
+}
+
+// Click hamburger
+.js-m-nav--toggled {
+  .m-hero-block--stars {
+    filter: blur(2px);
+    @include transition(0.5s);
+  }
+}
+
+@media (min-width: $bp-tablet) {
+  .js-m-nav--toggled {
+    .m-hero-block--stars {
+      filter: none;
+    }
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
 }
