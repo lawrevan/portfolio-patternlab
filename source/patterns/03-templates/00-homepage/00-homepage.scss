@@ -1,0 +1,13 @@
+.t-homepage {
+  position: relative;
+  z-index: $z-index-base;
+  height: auto;
+  min-height: 100vh;
+  margin-bottom: 37rem;
+}
+
+@media (min-width: $bp-tablet) {
+  .t-homepage {
+    margin-bottom: 31rem;
+  }
+}

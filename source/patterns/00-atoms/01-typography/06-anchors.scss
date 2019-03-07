@@ -10,28 +10,3 @@ a {
 
     }
 }
-
-.a-link--animate-fill {
-
-    &:hover,
-    &:focus {
-      &:after {
-        width: 100%;
-        @extend %gradient-text--right;
-      }
-    }
-
-    &:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      width: 0;
-      white-space: nowrap;
-      border-bottom: 2px solid $color-white;
-      @extend %gradient-text;
-      content: attr(data-hover);
-      transition: width 0.4s ease-out, padding 0.4s ease-out, color 0.4s ease-out;
-      display: inline-block;
-    }
-}

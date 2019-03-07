@@ -1,37 +1,3 @@
-main {
-  position: relative;
-  z-index: $z-index-base;
-  height: auto;
-  min-height: 100vh;
-  margin-bottom: 37rem;
-  background-color: $color-brand-primary;
-
-  section {
-    min-height: 100vh;
-    height: 100%;
-    position: relative;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    //// TODO:
-    background-size: cover;
-    background-size: 375px auto;
-    background-position: top center;
-  }
-}
-
-@media (min-width: $bp-desktop-sm) {
-  main {
-    section {
-      height: 100vh;
-      min-height: 800px;
-      background-size: 815px auto;
-      background-position: center center;
-    }
-  }
-}
-
 .c-footer {
   width: 100%;
   z-index: -2;
@@ -131,10 +97,6 @@ main {
 }
 
 @media (min-width: $bp-tablet) {
-  main {
-    margin-bottom: 31rem;
-  }
-
   .c-footer {
     height: 31rem;
 
@@ -147,85 +109,4 @@ main {
       flex-direction: row;
     }
   }
-}
-
-
-.c-designer {
-  background-image: url('../../assets/images/home/processor_large.jpg');
-  background-color: $color-brand-secondary;
-}
-
-.c-developer {
-  background-image: url('../../assets/images/home/processor_break_large.jpg');
-  background-color: $color-brand-primary;
-}
-
-/// split
-
-.split {
-  display: flex;
-  min-height: 100%;
-  height: auto;
-  width: 100%;
-  padding: 5rem 0;
-  position: absolute;
-  bottom: 0;
-
-  &--designer {
-    background: rgba(26,26,26, 0.55);
-  }
-
-  &--developer {
-    background: rgba(16, 16, 16, 0.55);
-  }
-
-  &__content {
-    width: 86%;
-    max-width: 36rem;
-    margin: 0 auto;
-    align-self: center;
-    height: auto;
-
-    p {
-      letter-spacing: -.01em;
-      font-family: $font-sf-text;
-      font-weight: 500;
-      color: $color-gray;
-    }
-  }
-
-  &__title {
-    font-weight: 500;
-    font-family: $font-sf-display;
-  }
-}
-
-@media (min-width: $bp-tablet) {
-  .split {
-
-  }
-}
-
-@media (min-width: $bp-desktop-sm) {
-  .split {
-    height: 100vh;
-    padding: 0;
-    width: 50%;
-    position: relative;
-
-    &--designer {
-      float: right;
-      background: rgba(26,26,26, 0.55);
-    }
-
-    &--developer {
-      float: left;
-      background: rgba(16,16,16,.55);
-    }
-
-    &__content {
-      width: 80%;
-    }
-  }
-
 }

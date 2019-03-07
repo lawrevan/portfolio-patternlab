@@ -51,11 +51,6 @@
   font-size: calculateRem($size);
 }
 
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
-}
-
 /*
  * Calculates Rem value for font-size
  * Px values are set as a fallback
@@ -76,44 +71,11 @@
     }
 }
 
-@mixin opacity ($opacity) {
-  opacity: $opacity;
-}
-
-@mixin border-radius ($radius) {
-  border-radius: $radius;
-  background-clip: padding-box;
-}
-
-@mixin box-shadow ($string) {
-  box-shadow: $string;
-}
-
-@mixin text-shadow ($string) {
-  text-shadow: $string;
-}
+/*
+ * Transition all with ease
+ * 
+ */
 
 @mixin transition($duration) {
   transition: all $duration ease;
-}
-
-@mixin animated($duration) {
-  animation-duration: $duration;
-  animation-fill-mode: both;
-}
-
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
-}
-
-// n is number of stars required
-@function multiple-box-shadow($n) {
-  $value: '#{random(2000)}px #{random(2000)}px #FFF';
-  
-  @for $i from 2 through $n {
-    $value: '#{$value}, #{random(2000)}px #{random(2000)}px #FFF'
-  }
-
-  @return unquote($value)
 }

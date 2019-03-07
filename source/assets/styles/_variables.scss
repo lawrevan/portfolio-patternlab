@@ -72,6 +72,9 @@ $container-max-width: 1170px;
 $page-x-padding: 40px;
 $page-y-padding: 0;
 
+
+
+
 $page-x-padding-mobile: 16px;
 $page-y-padding-mobile: 0;
 
@@ -95,3 +98,11 @@ $z-index-front: 	10;
 $z-index-top: 		100;
 $z-index-overlay: 	200;
 $z-index-modal: 	900;
+
+/*
+ * Hero Block Stars
+ */
+
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100);
