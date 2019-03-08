@@ -6,3 +6,33 @@
 		content: '';
 	}
 }
+
+// STYLE GUIDE SPECIFIC
+#molecules-nav,
+#components-header {
+  .m-nav {
+    position: relative;
+    background: $color-brand-primary;
+    opacity: 1;
+  }
+}
+
+#atoms-scroll-up-button,
+#atoms-scroll-down-button,
+#atoms-chevron-up,
+#atoms-chevron-down {
+  [class^="a-chevron"] {
+    position: relative;
+
+    &:before,
+    &:after {
+      background: $color-black;
+    }
+  }
+}
+
+#components-footer {
+  .c-footer {
+    position: relative;
+  }
+}

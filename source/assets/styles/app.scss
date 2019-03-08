@@ -1,5 +1,3 @@
-
-
 @import "utilities/_normalize.scss";
 @import "utilities/_global-styles.scss";
 //
@@ -9,10 +7,13 @@
 
 @import "_functions.scss";
 @import "_variables.scss";
+@import "_animations.scss";
 @import "_mixins.scss";
 @import "_placeholders.scss";
 
+
 @import "../../patterns/**/*.scss";
+
 //
 // // Buildkit specific, not used for the site
 @import "buildkit/_pattern-lab.scss";

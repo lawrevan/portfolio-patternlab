@@ -1,19 +1,18 @@
 .a-btn--scroll-up {
-    width:48px;
-    height:48px;
-    padding:0;
-    border-radius:50%;
-    background: $color-primary;
-    border:none;
-    text-align:center;
-    color: $color-white;
-    transition: box-shadow 0.3s ease;
-    position: fixed;
-    transform: translate3d(-99%, -99%, 0);
-    left: 99%;
-    top: 99%;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  transform: rotate(180deg);
+  position: absolute;
+  right: 10px;
+  top: 80%;
+}
 
-    &:hover{
-        box-shadow: 1px 5px 5px rgba($color-black, 0.2);
-    }
+@media (min-width: $bp-tablet) {
+  .a-btn--scroll-up {
+    position: relative;
+    margin-left: 30px;
+    top: 30px;
+    right: 0;
+  }
 }
