@@ -10,22 +10,22 @@
 <!--m-nav-toggle-->
 
   <nav class="m-nav">
-  <a class="m-logo-link" href="https://lawrevan.github.io/">
+  <!-- <a class="m-logo-link" href="https://lawrevan.github.io/">
   <img src="../../assets/images/logo/logo.svg"/>
 </a>
-
+ -->
   <ul class="m-nav__list">
       <li class="m-nav__item">
-        <a class="m-nav__link animate-link-fill" href="&#x2F;work" data-hover="Work"><span>Work</span></a>
+        <a class="m-nav__link animate-link-fill" href="https:&#x2F;&#x2F;lawrevan.github.io&#x2F;work" data-hover="Work"><span>Work</span></a>
       </li>
       <li class="m-nav__item">
-        <a class="m-nav__link animate-link-fill" href="&#x2F;about" data-hover="About"><span>About</span></a>
+        <a class="m-nav__link animate-link-fill" href="https:&#x2F;&#x2F;lawrevan.github.io&#x2F;about" data-hover="About"><span>About</span></a>
       </li>
       <li class="m-nav__item">
-        <a class="m-nav__link animate-link-fill" href="&#x2F;contact" data-hover="Contact"><span>Contact</span></a>
+        <a class="m-nav__link animate-link-fill" href="https:&#x2F;&#x2F;lawrevan.github.io&#x2F;contact" data-hover="Contact"><span>Contact</span></a>
       </li>
       <li class="m-nav__item">
-        <a class="m-nav__link animate-link-fill" href="" data-hover="Resume"><span>Resume</span></a>
+        <a class="m-nav__link animate-link-fill" href="https:&#x2F;&#x2F;lawrevan.github.io&#x2F;resume" data-hover="Resume"><span>Resume</span></a>
       </li>
   </ul>
 </nav>
@@ -48,7 +48,14 @@
     </h1>
     <p class="m-hero-block__description">Description</p>
 
-    <a class="a-btn a-btn--primary m-hero-block__cta" href="/">Placeholder Btn</a>
+    <button class="a-btn a-btn--scroll-down m-scroll-down" type="button" onclick="zenscroll.to(document.querySelector('.c-parallax-bgs--top'), 1750)">
+  <div class="m-scroll-down__chevron"></div>
+  <div class="m-scroll-down__chevron"></div>
+  <div class="m-scroll-down__chevron"></div>
+  <!-- <span class="m-scroll-down__text">Scroll down</span> -->
+</button>
+
+
   </div>
   <!-- m-hero-block__content -->
 </div>
@@ -133,5 +140,6 @@
 <!-- c-footer -->
 
 
+  <button class="a-btn a-btn--scroll-up" type="button" onclick="zenscroll.to(document.querySelector('.t-homepage'), 1750)">&#8679;</button>
 </div>
 <!-- t-homepage -->

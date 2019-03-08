@@ -3,7 +3,7 @@
   &:focus {
     &:after {
       width: 100%;
-      @extend %gradient-text--right;
+      @extend %gradient-text--top-30;
     }
   }
 

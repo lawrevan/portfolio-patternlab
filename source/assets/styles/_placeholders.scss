@@ -30,6 +30,12 @@
   color: transparent;
 }
 
+%gradient-text--top-30 {
+  background-image: linear-gradient(to top, $color-white 30%, $color-brand-secondary);
+  background-clip: text;
+  color: transparent;
+}
+
 %gradient-text--bottom {
   background-image: linear-gradient(to bottom, $color-white 50%, $color-brand-secondary);
   background-clip: text;

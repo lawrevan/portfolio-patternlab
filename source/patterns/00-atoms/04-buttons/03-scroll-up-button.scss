@@ -1,4 +1,4 @@
-.a-btn--scroll-up{
+.a-btn--scroll-up {
     width:48px;
     height:48px;
     padding:0;
@@ -8,7 +8,11 @@
     text-align:center;
     color: $color-white;
     transition: box-shadow 0.3s ease;
-    
+    position: fixed;
+    transform: translate3d(-99%, -99%, 0);
+    left: 99%;
+    top: 99%;
+
     &:hover{
         box-shadow: 1px 5px 5px rgba($color-black, 0.2);
     }

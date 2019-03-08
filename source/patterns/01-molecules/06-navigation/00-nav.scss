@@ -70,11 +70,11 @@
     height: auto;
     transform: none;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-end;
 
     &__list {
       padding: 0;
-      float: right;
     }
 
     &__item {
