@@ -6,10 +6,9 @@
 		content: '';
 	}
 }
-
+  
 // STYLE GUIDE SPECIFIC
-#molecules-nav,
-#components-header {
+#molecules-nav {
   .m-nav {
     position: relative;
     background: $color-brand-primary;

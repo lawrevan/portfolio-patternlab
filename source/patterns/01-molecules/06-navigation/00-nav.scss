@@ -1,20 +1,18 @@
 .m-nav {
-  // position: absolute;
-  position: relative;
-  left: 0;
-  top: 0;
-  z-index: $z-index-base;
-  height: 100%;
   height: 0;
   width: 100%;
-  padding: $grid-gutter-width;
+  padding: 0;
+  z-index: $z-index-base;
   opacity: 0;
-  transform: scale(0.85);
+  transform: scale(0);
   @include transition(0.4s);
+  transition: transform 0.4s ease, height 0.4s ease, opacity 0.4s ease;
   text-align: center;
+  flex-wrap: wrap;
+
 
   &__list {
-    padding: 3.5em 0 0 0;
+    width: 100%;
   }
 
   &__item {
@@ -27,25 +25,17 @@
   }
 
   &__link {
-    font-size: 1.25em;
+    font-size: 1.5rem;;
     text-decoration: none;
     padding: 1em 0;
     font-weight: 300;
     display: inline-block;
     transition: color 0.5s ease-out, padding 0.5s ease-out;
     @extend %gradient-text;
-
-    &:hover {
-      padding: 1em;
-    }
+    pointer-events: none;
+    cursor: default;
 
     &.animate-link-fill {
-
-      &:hover {
-        &:after {
-          padding: 1em;
-        }
-      }
 
       &:after {
         border: 0;
@@ -56,76 +46,30 @@
   }
 }
 
-
-
-@media (max-width: ($bp-tablet - 1)) {
+.js-m-nav--toggled {
   .m-nav {
-    height: 0;
-    width: 100%;
-    padding: 0;
+    z-index: $z-index-front;
+    transform: scale(1);
+    opacity: 1;
+    padding: 0 $grid-gutter-width $grid-gutter-width;
+    height: 350px;
 
-    &__list {
-      padding: 0;
+    &__link {
+      pointer-events: auto;
+      cursor: pointer;
     }
   }
-
-  .m-hero-block--stars {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .m-hero-block__content {
-    display: flex !important ;
-    flex-direction: column !important ;
-    justify-content: center !important ;
-    align-items: center !important ;
-    position: relative !important ;
-    transform: none !important ;
-    left: 0 !important ;
-    top: 0 !important ;
-    transform: none !important ;
-  }
-
-  .m-hero-block__headline {
-    transition: all 0.6s ease;
-    font-size: calculateRem(45px);
-  }
-
-  .js-m-nav--toggled {
-    .m-nav {
-      display: block;
-      z-index: $z-index-front;
-      transform: scale(1);
-      opacity: 1;
-      @include transition(0.5s);
-
-      padding: 0 $grid-gutter-width;
-      height: 100%;
-    }
-
-    .m-hero-block__headline {
-      transform: scale(.75);
-    }
-  }
-
 }
+
 @media (min-width: $bp-tablet) {
   .m-nav {
-    height: 100%;
+    height: auto;
     z-index: $z-index-top;
     opacity: 1;
-    height: auto;
+    padding: $grid-gutter-width;
     transform: none;
     display: flex;
-    // justify-content: space-between;
-    // justify-content: flex-end;
     justify-content: center;
-    align-items: center;
-
-    &__list {
-      padding: 0;
-    }
 
     &__item {
       display: inline-block;
@@ -134,6 +78,9 @@
     }
 
     &__link {
+      pointer-events: auto;
+      cursor: pointer;
+
       &.animate-link-fill {
         border-bottom: 2px solid rgba(255, 255, 255, 0.15);
         padding-bottom: calculateRem(10px);

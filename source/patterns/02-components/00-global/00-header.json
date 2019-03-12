@@ -2,19 +2,23 @@
   "navigation": [
     {
       "level-1": "Work",
-      "href": "https://lawrevan.github.io/work"
+      "href": "https://lawrevan.github.io/work",
+      "modifier": "m-nav__link--work"
     },
     {
       "level-1": "About",
-      "href": "https://lawrevan.github.io/about"
+      "href": "https://lawrevan.github.io/about",
+      "modifier": "m-nav__link--about"
     },
     {
       "level-1": "Contact",
-      "href": "https://lawrevan.github.io/contact"
+      "href": "https://lawrevan.github.io/contact",
+      "modifier": "m-nav__link--contact"
     },
     {
       "level-1": "Resume",
-      "href": "https://lawrevan.github.io/resume"
+      "href": "https://lawrevan.github.io/resume",
+      "modifier": "m-nav__link--resume"
     }
   ]
 }

@@ -3,3 +3,10 @@
   height: 25px;
   padding: 0;
 }
+
+.js-m-nav--toggled {
+  .a-btn--scroll-down {
+    filter: blur(3px);
+    transform: translate3d(0, 70px,0);
+  }
+}

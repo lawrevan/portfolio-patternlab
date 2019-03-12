@@ -1,11 +1,12 @@
 <nav class="m-nav">
-  <!-- {{> molecules-logo-link }} -->
   <ul class="m-nav__list">
     {{#navigation}}
       <li class="m-nav__item">
-        <a class="m-nav__link animate-link-fill" href="{{href}}" data-hover="{{level-1}}"><span>{{level-1}}</span></a>
+        <a class="m-nav__link {{modifier}} animate-link-fill" href="" data-hover="{{level-1}}">{{level-1}}</a>
       </li>
     {{/navigation}}
   </ul>
+
+  {{> molecules-social-media }}
 </nav>
 <!-- m-nav -->
