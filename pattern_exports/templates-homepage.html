@@ -25,10 +25,10 @@
   <nav class="m-nav">
   <ul class="m-nav__list">
       <li class="m-nav__item">
-        <a class="m-nav__link m-nav__link--work animate-link-fill" href="" data-hover="Work">Work</a>
+        <a class="m-nav__link m-nav__link--about animate-link-fill" href="" data-hover="About">About</a>
       </li>
       <li class="m-nav__item">
-        <a class="m-nav__link m-nav__link--about animate-link-fill" href="" data-hover="About">About</a>
+        <a class="m-nav__link m-nav__link--work animate-link-fill" href="" data-hover="Work">Work</a>
       </li>
       <li class="m-nav__item">
         <a class="m-nav__link m-nav__link--contact animate-link-fill" href="" data-hover="Contact">Contact</a>
@@ -76,6 +76,16 @@
 <!-- c-header -->
 
 
+  <section class='c-about'>
+  <div class="c-about__wrapper">
+    <h2 class="c-about__headline">About</h2>
+    <p class="c-about__description">
+      Placeholder Text
+    </p>
+  </div>
+</section>
+
+
   <section class="c-parallax-bgs c-parallax-bgs--top">
     <div class="c-parallax-bgs__split">
         <div class="c-parallax-bgs__content">
@@ -107,6 +117,8 @@
 </section>
 <!-- c-parallax-bgs--bottom -->
 
+<div class='c-contact'></div>
+
 
   <!-- undefined -->
 
@@ -116,8 +128,14 @@
 
     <div class="c-footer__content">
         <h2 class="c-footer__title">Thanks for stopping by!</h2>
-        <h3 class="c-footer__subtitle">Want to chat?</h3>
-        <p class="c-footer__description"> You may use the contact <a class="animate-link-fill c-footer__link" href="mailto:lawrevan8484@gmail.com" data-hover="form">form</a> or <a class="animate-link-fill c-footer__link" href="mailto:lawrevan8484@gmail.com" data-hover="e-mail me">e-mail me </a> directly. Feel free to check out my <a class="animate-link-fill c-footer__link" href="mailto:lawrevan8484@gmail.com" data-hover="resume">resume</a> to know more about my employment and education history.</p>
+
+        <!-- <button class="a-btn a-btn--primary ">Lets Chat</button> -->
+
+        <a href="mailto:lawrevan8484@gmail.com" class="btn btn-five" target="_blank">
+          <span>Lets Chat</span>
+        </a>
+
+        <p class="c-footer__description"> Feel free to check out my <a class="animate-link-fill" href="mailto:lawrevan8484@gmail.com" data-hover="resume">resume</a> to know more about my employment and education history.</p>
     </div>
     <!-- c-footer__content -->
 
@@ -125,25 +143,29 @@
         <div class="c-footer__row">
 
           <div class="c-footer__column">
-            <span>Made with <a class="animate-link-fill c-footer__link" href="https://patternlab.io/" target="_blank" data-hover="Pattern Lab">Pattern Lab</a></span>
+            <span>Made with <a class="animate-link-fill" href="https://patternlab.io/" target="_blank" data-hover="Pattern Lab">Pattern Lab</a></span>
           </div>
 
           <div class="c-footer__column">
-            <a class="c-footer__link c-footer__link--icon far fa-envelope" href="mailto:lawrevan8484@gmail.com" target="_blank">
-              <i class="far fa-envelope"></i>
-            </a>
+            <div class="m-social-icons">
+  <a class="m-social-icons__link far fa-envelope" href="mailto:lawrevan8484@gmail.com" target="_blank">
+    <i class="far fa-envelope"></i>
+  </a>
 
-            <a class="c-footer__link c-footer__link--icon fab fa-linkedin-in" href="https://www.linkedin.com/in/larry-evans-51914749/" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+  <a class="m-social-icons__link fab fa-linkedin-in" href="https://www.linkedin.com/in/larry-evans-51914749/" target="_blank">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
 
-            <a class="c-footer__link c-footer__link--icon fab fa-codepen" href="https://codepen.io/gorillaLarry/" target="_blank">
-              <i class="fab fa-codepen"></i>
-            </a>
+  <a class="m-social-icons__link fab fa-codepen" href="https://codepen.io/gorillaLarry/" target="_blank">
+    <i class="fab fa-codepen"></i>
+  </a>
 
-            <a class="c-footer__link c-footer__link--icon fab fa-github" href="https://github.com/lawrevan" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
+  <a class="m-social-icons__link fab fa-github" href="https://github.com/lawrevan" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+<!-- m-social-icons -->
+
           </div>
 
           <div class="c-footer__column">

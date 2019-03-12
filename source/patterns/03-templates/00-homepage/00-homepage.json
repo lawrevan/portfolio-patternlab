@@ -1,14 +1,14 @@
 {
   "navigation": [
     {
-      "level-1": "Work",
-      "href": "https://lawrevan.github.io/work",
-      "modifier": "m-nav__link--work"
-    },
-    {
       "level-1": "About",
       "href": "https://lawrevan.github.io/about",
       "modifier": "m-nav__link--about"
+    },
+    {
+      "level-1": "Work",
+      "href": "https://lawrevan.github.io/work",
+      "modifier": "m-nav__link--work"
     },
     {
       "level-1": "Contact",

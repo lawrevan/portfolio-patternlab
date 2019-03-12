@@ -5,7 +5,8 @@
   z-index: $z-index-base;
   opacity: 0;
   transform: scale(0);
-  @include transition(0.4s);
+
+  //causes glitch in mobile
   transition: transform 0.4s ease, height 0.4s ease, opacity 0.4s ease;
   text-align: center;
   flex-wrap: wrap;

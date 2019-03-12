@@ -80,7 +80,7 @@ if (scrollDownBtn) {
     if (header.classList.contains('js-m-nav--toggled')) {
       e.preventDefault();
     } else {
-      zenscroll.to(sectionWork, 1750);
+      zenscroll.to(sectionAbout, 1750);
     }
   }
 }

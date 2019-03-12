@@ -1,5 +1,5 @@
 // Scroll down button
-const parallax = document.querySelector('.c-parallax-bgs--top');
+const about = document.querySelector('.c-about');
 const scrollDownBtn = document.querySelector(".a-btn--scroll-down");
 const header = document.querySelector(".c-header");
 
@@ -13,7 +13,7 @@ if (scrollDownBtn) {
     if (header.classList.contains('js-m-nav--toggled')) {
       e.preventDefault();
     } else {
-      zenscroll.to(parallax, 1750);
+      zenscroll.to(about, 1750);
     }
   }
 }
