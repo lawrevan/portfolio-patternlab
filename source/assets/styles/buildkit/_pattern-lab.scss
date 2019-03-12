@@ -6,16 +6,10 @@
 		content: '';
 	}
 }
-  
-// STYLE GUIDE SPECIFIC
-#molecules-nav {
-  .m-nav {
-    position: relative;
-    background: $color-brand-primary;
-    opacity: 1;
-  }
-}
 
+// STYLE GUIDE SPECIFIC
+
+// Atoms
 #atoms-scroll-up-button,
 #atoms-scroll-down-button,
 #atoms-chevron-up,
@@ -30,6 +24,28 @@
   }
 }
 
+// Molecules
+#molecules-nav {
+  .m-nav {
+    position: relative;
+    background: $color-brand-primary;
+    opacity: 1;
+  }
+}
+
+
+#molecules-nav-toggle{
+    .m-nav-toggle {
+        display: block;
+        position: relative;
+
+        &__item {
+            background-color: #000;
+        }
+    }
+}
+
+// Components
 #components-footer {
   .c-footer {
     position: relative;

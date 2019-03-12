@@ -1,135 +1,135 @@
 .c-footer {
-  width: 100%;
-  z-index: -2;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 37rem;
-  background-color: $color-brand-secondary;
-
-  &__content {
-	  @extend %container;
-    padding-top: 5rem;
-    text-align: center;
-  }
-
-  &__title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  &__description {
-    color: $color-gray;
-    max-width: 50rem;
-    margin: 2rem auto 1rem;
-  }
-
-  &__copyright {
-    position: absolute;
+    width: 100%;
+    z-index: -2;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: $color-brand-primary;
-  }
-
-  &__row {
-    @extend %container;
-    padding-top: calculateRem(30px);
-    padding-bottom: calculateRem(30px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__column {
-    padding-top: calculateRem(15px);
-    padding-bottom: calculateRem(15px);
-    color: $color-white;
-
-    span {
-      @extend %gradient-text;
-    }
-  }
-
-  .m-social-icons {
-    padding-top: 0;
-
-    &__link {
-      font-size: 1.5rem;
-      margin: 0 8px;
-
-      &:hover,
-      &:focus {
-        [class^="fa"] {
-          &:before {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: $bp-tablet) {
-  .c-footer {
-    height: 31rem;
+    height: 37rem;
+    background-color: $color-brand-secondary;
 
     &__content {
-      padding-top: 6rem;
+        @extend %container;
+        padding-top: 5rem;
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        color: $color-gray;
+        max-width: 50rem;
+        margin: 2rem auto 1rem;
+    }
+
+    &__copyright {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $color-brand-primary;
     }
 
     &__row {
-      justify-content: space-between;
-      flex-direction: row;
+        @extend %container;
+        padding-top: calculateRem(30px);
+        padding-bottom: calculateRem(30px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-  }
+
+    &__column {
+        padding-top: calculateRem(15px);
+        padding-bottom: calculateRem(15px);
+        color: $color-white;
+
+        span {
+            @extend %gradient-text;
+        }
+    }
+
+    .m-social-icons {
+        padding-top: 0;
+
+        &__link {
+            font-size: 1.5rem;
+            margin: 0 8px;
+
+            &:focus,
+            &:hover {
+                [class^="fa"] {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
+@media (min-width: $bp-tablet) {
+    .c-footer {
+        height: 31rem;
 
+        &__content {
+            padding-top: 6rem;
+        }
 
+        &__row {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+}
 //// TODO:
+
 .btn {
-  position: relative;
-  color: white;
-  padding: 20px 75px;
-  transition: all 0.3s;
-  span {
+    position: relative;
+    color: white;
+    padding: 20px 75px;
     transition: all 0.3s;
-    tranform: scale(1, 1);
-  }
+
+    span {
+        transition: all 0.3s;
+        tranform: scale(1, 1);
+    }
 }
 
-.btn::before, .btn::after {
-  content: '';
-  position: absolute;
-  transition: all 0.3s;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+.btn::after,
+.btn::before {
+    content: '';
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .btn-five::before {
-  transition: transform 0.15s, 0.15s border-radius 0.15s, opacity 0.15s;
-  opacity: 0;
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(0.1, 0.1);
-  border-radius: 50%;
+    transition: transform 0.15s, 0.15s border-radius 0.15s, opacity 0.15s;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0.1, 0.1);
+    border-radius: 50%;
 }
 
 .btn-five:hover::before {
-  opacity: 1;
-  transform: scale(1, 1);
-  border-radius: 40px;
+    opacity: 1;
+    transform: scale(1, 1);
+    border-radius: 40px;
 }
 
 .btn-five::after {
-  border-radius: 40px;
-  transition: all 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-five:hover::after {
-  opacity: 0;
+    opacity: 0;
 }

@@ -1,0 +1,25 @@
+.c-work-list {
+    background-color: $color-brand-primary;
+
+    &__container {
+        @extend %container;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__title {
+
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+
+    }
+}

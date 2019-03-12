@@ -12,12 +12,12 @@ ul {
 
     li {
         position: relative;
-        padding: 0 0 0 20px;
+        padding: 0;
 
         &:before {
-            content: '\2013';
+            content: none;
             position: absolute;
-            left: 0px;
+            left: 0;
         }
     }
 }

@@ -1,99 +1,98 @@
 .c-parallax-bgs {
-  $this: &;
-  min-height: 700px;
-  height: 100%;
-  position: relative;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-size: 375px auto;
-  background-position: center center;
-
-  &__split {
-    display: flex;
-    min-height: 100%;
-    height: auto;
-    width: 100%;
-    padding: 5rem 0;
-    position: absolute;
-    bottom: 0;
-  }
-
-  &__content {
-    max-width: calculateRem(575px);
-    margin: 0 auto;
-    align-self: flex-end;
-    height: auto;
-    // background: rgba(26,26,26, 0.25);
-    width: 100%;
-    padding: $grid-gutter-width $grid-gutter-width 0;
-  }
-
-  &__title {
-    font-weight: 500;
-    font-family: $font-sf-display;
-  }
-
-  &__description {
-    letter-spacing: -.01em;
-    font-family: $font-sf-text;
-    font-weight: 500;
-    color: $color-white;
-  }
-
-  &--top {
-    background-image: url('../../assets/images/home/processor_large.jpg');
-    background-color: $color-brand-secondary;
-  }
-  &--bottom {
-    background-image: url('../../assets/images/home/processor_break_large.jpg');
-    background-color: $color-brand-primary;
-  }
-}
-@media (min-width: $bp-tablet) {
-  .c-parallax-bgs {
-    height: 100vh;
-    min-height: 800px;
-    background-size: 560px auto;
-
-    &__content {
-      align-self: center;
-    }
-  }
-}
-
-@media (min-width: $bp-desktop-sm) {
-  .c-parallax-bgs {
     $this: &;
-
-    background-size: 815px auto;
+    min-height: 700px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 375px auto;
     background-position: center center;
 
     &__split {
-      height: 100vh;
-      padding: 0;
-      width: 50%;
-      position: relative;
+        display: flex;
+        min-height: 100%;
+        height: auto;
+        width: 100%;
+        padding: 5rem 0;
+        position: absolute;
+        bottom: 0;
     }
 
     &__content {
-      background: transparent;
-      padding: 0 $grid-gutter-width;
+        max-width: calculateRem(575px);
+        margin: 0 auto;
+        align-self: flex-end;
+        height: auto;
+        // background: rgba(26,26,26, 0.25);
+        width: 100%;
+        padding: $grid-gutter-width $grid-gutter-width 0;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-family: $font-sf-display;
+    }
+
+    &__description {
+        letter-spacing: -.01em;
+        font-family: $font-sf-text;
+        font-weight: 500;
+        color: $color-white;
     }
 
     &--top {
-      #{$this}__split {
-        float: right;
-        background: rgba(26,26,26, 0.55);
-      }
+        background-image: url("../../assets/images/home/processor_large.jpg");
+        background-color: $color-brand-secondary;
     }
 
     &--bottom {
-      #{$this}__split {
-        float: left;
-        background: rgba(16,16,16,.55);
-      }
+        background-image: url("../../assets/images/home/processor_break_large.jpg");
+        background-color: $color-brand-primary;
     }
-  }
+}
+@media (min-width: $bp-tablet) {
+    .c-parallax-bgs {
+        height: 100vh;
+        min-height: 800px;
+        background-size: 560px auto;
+
+        &__content {
+            align-self: center;
+        }
+    }
+}
+@media (min-width: $bp-desktop-sm) {
+    .c-parallax-bgs {
+        $this: &;
+        background-size: 815px auto;
+        background-position: center center;
+
+        &__split {
+            height: 100vh;
+            padding: 0;
+            width: 50%;
+            position: relative;
+        }
+
+        &__content {
+            background: transparent;
+            padding: 0 $grid-gutter-width;
+        }
+
+        &--top {
+            #{$this}__split {
+                float: right;
+                background: rgba(26,26,26, 0.55);
+            }
+        }
+
+        &--bottom {
+            #{$this}__split {
+                float: left;
+                background: rgba(16,16,16,.55);
+            }
+        }
+    }
 }

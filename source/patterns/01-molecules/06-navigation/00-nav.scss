@@ -1,105 +1,96 @@
 .m-nav {
-  height: 0;
-  width: 100%;
-  padding: 0;
-  z-index: $z-index-base;
-  opacity: 0;
-  transform: scale(0);
-
-  //causes glitch in mobile
-  transition: transform 0.4s ease, height 0.4s ease, opacity 0.4s ease;
-  text-align: center;
-  flex-wrap: wrap;
-
-
-  &__list {
+    height: 0;
     width: 100%;
-  }
-
-  &__item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding: 0;
+    z-index: $z-index-base;
+    opacity: 0;
+    transform: scale(0);
+    //causes glitch in mobile
+    transition: transform 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+    text-align: center;
+    flex-wrap: wrap;
 
-    &:before {
-      content: '';
+    &__list {
+        width: 100%;
     }
-  }
 
-  &__link {
-    font-size: 1.5rem;;
-    text-decoration: none;
-    padding: 1em 0;
-    font-weight: 300;
-    display: inline-block;
-    transition: color 0.5s ease-out, padding 0.5s ease-out;
-    @extend %gradient-text;
-    pointer-events: none;
-    cursor: default;
+    &__item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
 
-    &.animate-link-fill {
-
-      &:after {
-        border: 0;
+    &__link {
+        font-size: 1.5rem;
+        text-decoration: none;
         padding: 1em 0;
-        transition: width 0.5s ease-out, padding 0.5s ease-out, color 0.5s ease-out;
-      }
+        font-weight: 300;
+        display: inline-block;
+        transition: color 0.5s ease-out, padding 0.5s ease-out;
+        @extend %gradient-text;
+        pointer-events: none;
+        cursor: default;
+
+        &.animate-link-fill {
+            &:after {
+                border: 0;
+                padding: 1em 0;
+                transition: width 0.5s ease-out, padding 0.5s ease-out, color 0.5s ease-out;
+            }
+        }
     }
-  }
 }
 
 .js-m-nav--toggled {
-  .m-nav {
-    z-index: $z-index-front;
-    transform: scale(1);
-    opacity: 1;
-    padding: 0 $grid-gutter-width $grid-gutter-width;
-    height: 350px;
+    .m-nav {
+        z-index: $z-index-front;
+        transform: scale(1);
+        opacity: 1;
+        padding: 0 $grid-gutter-width $grid-gutter-width;
+        height: 350px;
 
-    &__link {
-      pointer-events: auto;
-      cursor: pointer;
+        &__link {
+            pointer-events: auto;
+            cursor: pointer;
+        }
     }
-  }
 }
-
 @media (min-width: $bp-tablet) {
-  .m-nav {
-    height: auto;
-    z-index: $z-index-top;
-    opacity: 1;
-    padding: $grid-gutter-width;
-    transform: none;
-    display: flex;
-    justify-content: center;
+    .m-nav {
+        height: auto;
+        z-index: $z-index-top;
+        opacity: 1;
+        padding: $grid-gutter-width;
+        transform: none;
+        display: flex;
+        justify-content: center;
 
-    &__item {
-      display: inline-block;
-      border-bottom: 0;
-      padding: 0 1rem;
-    }
-
-    &__link {
-      pointer-events: auto;
-      cursor: pointer;
-
-      &.animate-link-fill {
-        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-        padding-bottom: calculateRem(10px);
-
-        &:hover {
-          padding: 1em 0 calculateRem(10px);
-
-          &:after {
-            padding: 1em 0 0.625rem;
-          }
+        &__item {
+            display: inline-block;
+            border-bottom: 0;
+            margin: 0 1rem;
         }
 
-        &:after {
-          border-bottom: 2px solid rgba(255,255,255,.75);
-          padding-bottom: calculateRem(10px);
-          transition: width 0.3s ease-out, color 0.3s ease-out;
+        &__link {
+            pointer-events: auto;
+            cursor: pointer;
+
+            &.animate-link-fill {
+                border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+                padding-bottom: calculateRem(10px);
+
+                &:hover {
+                    padding: 1em 0 calculateRem(10px);
+
+                    &:after {
+                        padding: 1em 0 0.625rem;
+                    }
+                }
+
+                &:after {
+                    border-bottom: 2px solid rgba(255,255,255,.75);
+                    padding-bottom: calculateRem(10px);
+                    transition: width 0.3s ease-out, color 0.3s ease-out;
+                }
+            }
         }
-      }
     }
-  }
 }

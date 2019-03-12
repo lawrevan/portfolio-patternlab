@@ -1,18 +1,18 @@
 .c-about {
-  background: $color-brand-primary;
-  
-  &__wrapper {
-    @extend %container;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+    background: $color-brand-primary;
 
-  &__headline {
-    text-align: center;
-  }
+    &__wrapper {
+        @extend %container;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
-  &__description {
-    text-align: center;
-    color: $color-white;
-  }
+    &__headline {
+        text-align: center;
+    }
+
+    &__description {
+        text-align: center;
+        color: $color-white;
+    }
 }
