@@ -1,6 +1,6 @@
 // Scroll up button
 const scrollUpBtn = document.querySelector(".a-btn--scroll-up");
-const pageTop = document.querySelector(".t-homepage");
+const sectionTop = document.querySelector(".t-homepage");
 
 if (scrollUpBtn) {
 
@@ -8,6 +8,6 @@ if (scrollUpBtn) {
 
 	function backToTop(){
 	    // window.scrollTo({ top: 0, behavior: 'smooth' });
-      zenscroll.to(pageTop, 1750);
+      zenscroll.to(sectionTop, 1750);
 	}
 }

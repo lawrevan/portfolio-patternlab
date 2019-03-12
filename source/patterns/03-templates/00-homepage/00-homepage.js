@@ -1,37 +1,37 @@
 const hamburgerBtn = document.querySelector('.m-nav-toggle');
-
 const header = document.querySelector('.c-header');
 
-if ( hamburgerBtn ) {
+if (header) {
   hamburgerBtn.addEventListener('click', function(e) {
     header.classList.toggle('js-m-nav--toggled');
     e.preventDefault();
   })
+
+  mediaCheck({
+    media: '(min-width: 768px)',
+    // Switch to Desktop Version
+    entry: function () {
+        header.classList.remove('js-m-nav--toggled');
+    },
+    // Switch to tablet Version
+    // exit: function () {
+    //     $body.addClass('tablet-slick');
+    // }
+  });
 }
 
-// Nav Links
+// Links
 const linkWork = document.querySelector('.m-nav__link--work');
 const linkAbout = document.querySelector('.m-nav__link--about');
 const linkContact = document.querySelector('.m-nav__link--contact');
 const scrollDownBtn = document.querySelector(".a-btn--scroll-down");
+const scrollUpBtn = document.querySelector(".a-btn--scroll-up");
 
 // Scroll Targets
 const sectionWork = document.querySelector('.c-parallax-bgs--top');
 const sectionAbout = document.querySelector('.c-about');
 const sectionContact = document.querySelector('.c-contact');
-
-// Media Check
-mediaCheck({
-  media: '(min-width: 768px)',
-  // Switch to Desktop Version
-  entry: function () {
-    //Remove nav toggle at >= tablet
-      header.classList.remove('js-m-nav--toggled');
-  },
-  // // Switch to tablet Version
-  // exit: function () {
-  // }
-});
+const sectionTop = document.querySelector(".t-homesection");
 
 if (linkWork) {
   linkWork.addEventListener("click", scrollDown);
@@ -41,8 +41,8 @@ if (linkWork) {
   function scrollDown(e) {
 
     e.preventDefault();
-    //Closes nav right away
 
+    //Closes nav right away
     // header.classList.remove('js-m-nav--toggled')
 
     //Closes nav with 2 second delay
@@ -74,6 +74,7 @@ if (linkWork) {
 
 // Scroll Button
 if (scrollDownBtn) {
+
   scrollDownBtn.addEventListener("click", scrollDown);
 
   function scrollDown(e) {
@@ -83,4 +84,14 @@ if (scrollDownBtn) {
       zenscroll.to(sectionAbout, 1750);
     }
   }
+}
+
+// Scroll up button
+if (scrollUpBtn) {
+
+	scrollUpBtn.addEventListener("click", backToTop);
+
+	function backToTop(){
+      zenscroll.to(sectionTop, 1750);
+	}
 }

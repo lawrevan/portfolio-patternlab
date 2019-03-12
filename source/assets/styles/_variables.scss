@@ -15,6 +15,8 @@ $color-white: #FFF;
 $color-black: #000;
 $color-gray: #CCC;
 $color-light-gray: #F6F6F6;
+$color-dk-grey: #282828;
+
 
 // Utility Colors
 $color-green: #5B792F;
@@ -62,6 +64,7 @@ $bp-tablet: 768px;
 $bp-desktop-sm: 960px;
 $bp-desktop: 1024px;
 $bp-desktop-lg: 1440px;
+$lg: 1185px;
 
 /*
  * Grid / Layout
@@ -79,6 +82,7 @@ $page-x-padding-mobile: 16px;
 $page-y-padding-mobile: 0;
 
 $grid-gutter-width: 30px;
+
 
 /*
  * Header
@@ -98,6 +102,12 @@ $z-index-front: 	10;
 $z-index-top: 		100;
 $z-index-overlay: 	200;
 $z-index-modal: 	900;
+
+// Spacing
+$spacer: 1rem !default;
+
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
 
 /*
  * Hero Block Stars
