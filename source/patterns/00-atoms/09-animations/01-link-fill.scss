@@ -3,7 +3,7 @@
   &:focus {
     &:after {
       width: 100%;
-      @extend %gradient-text--top-30;
+      // @extend %gradient-text--top-30;
     }
   }
 
@@ -15,7 +15,7 @@
     width: 0;
     white-space: nowrap;
     border-bottom: 2px solid $color-white;
-    @extend %gradient-text;
+    // @extend %gradient-text;
     content: attr(data-hover);
     transition: width 0.4s ease-out, padding 0.4s ease-out, color 0.4s ease-out;
     display: inline-block;

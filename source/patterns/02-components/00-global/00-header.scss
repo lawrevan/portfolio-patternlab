@@ -1,4 +1,74 @@
 .c-header {
     position: relative;
     z-index: $z-index-top;
+
+    &.js-about-active {
+        .m-stars {
+            animation: fronte 2000ms linear forwards 2000ms;
+
+            &__content {
+                opacity: 0;
+            }
+
+            &__wrapper {
+                animation: logoDisappear 2000ms ease-out 0s;
+                animation-fill-mode: forwards;
+                animation-play-state: running;
+            }
+        }
+
+
+        .m-star-wars__content {
+            animation-name: starWarsContent;
+            animation-timing-function: linear;
+            animation-duration: 30s;
+            // animation-delay: 1s;
+            animation-iteration-count: 1;
+            animation-play-state: running;
+        }
+
+        .close-button {
+            transform: translate3d(20px,20px,0);
+            opacity: 1;
+        }
+
+    }
+
+    &.js-about-paused {
+        .m-stars {
+            &__wrapper {
+                animation-play-state: paused;
+            }
+        }
+
+        .c-about {
+            .m-star-wars__content {
+                animation-play-state: paused;
+            }
+        }
+    }
+}
+@keyframes logoDisappear {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
+@keyframes fronte {
+    from {
+        z-index: $z-index-base;
+    }
+
+    to {
+        z-index: $z-index-front;
+    }
 }

@@ -1,123 +1,145 @@
-.m-stars  {
-  $this: &;
+.m-stars {
+    $this: &;
+    position: relative;
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, $color-brand-secondary 0%, $color-brand-secondary 100%);
+    overflow: hidden;
+    @include transition(0.5s);
 
-  height: 100vh;
-  background: radial-gradient(ellipse at bottom, $color-brand-primary 0%, $color-brand-secondary 100%);
-  overflow: hidden;
-  @include transition(0.5s);
 
-  &__star {
-    background: transparent;
+    &__star {
+        background: transparent;
 
-    &:after {
-      content: " ";
-      position: absolute;
-      background: transparent;
-      top: 2000px;
+        &:after {
+            content: " ";
+            position: absolute;
+            background: transparent;
+            top: 2000px;
+        }
+
+        &--1 {
+            width: 1px;
+            height: 1px;
+            box-shadow: $shadows-small;
+            animation: animStar 50s linear infinite;
+
+            &:after {
+                width: 1px;
+                height: 1px;
+                box-shadow: $shadows-small;
+            }
+        }
+
+        &--2 {
+            width: 2px;
+            height: 2px;
+            box-shadow: $shadows-medium;
+            animation: animStar 100s linear infinite;
+
+            &:after {
+                width: 2px;
+                height: 2px;
+                box-shadow: $shadows-medium;
+            }
+        }
+
+        &--3 {
+            width: 3px;
+            height: 3px;
+            box-shadow: $shadows-big;
+            animation: animStar 150s linear infinite;
+
+            &:after {
+                width: 3px;
+                height: 3px;
+                box-shadow: $shadows-big;
+            }
+        }
     }
 
-    &--1 {
-      width: 1px;
-      height: 1px;
-      box-shadow: $shadows-small;
-      animation: animStar 50s linear infinite;
-
-      &:after {
-        width: 1px;
-        height: 1px;
-        box-shadow: $shadows-small;
-      }
+    &__content {
+        position: absolute;
+        transform: translate3d(-50%,-50%,0);
+        transform-origin: center center;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 3s ease-out;
     }
 
-    &--2 {
-      width: 2px;
-      height: 2px;
-      box-shadow: $shadows-medium;
-      animation: animStar 100s linear infinite;
-
-      &:after {
-        width: 2px;
-        height: 2px;
-        box-shadow: $shadows-medium;
-      }
+    &__wrapper {
+        animation: logoAppear 1500ms ease-out 0s;
     }
 
-    &--3 {
-      width: 3px;
-      height: 3px;
-      box-shadow: $shadows-big;
-      animation: animStar 150s linear infinite;
+    &__headline {
+        transition: transform 0.6s ease, font-size 0.6s ease;
+        font-size: calculateRem(45px);
+        text-align: center;
+        transform: scale(1);
 
-      &:after {
-        width: 3px;
-        height: 3px;
-        box-shadow: $shadows-big;
-      }
+        span {
+            display: block;
+        }
     }
-  }
-
-  &__content {
-    position: absolute;
-    transform: translate3d(-50%,-50%,0);
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
-  }
-
-  &__headline {
-    transition: transform 0.6s ease, font-size 0.6s ease;
-    font-size: calculateRem(45px);
-    text-align: center;
-    transform: scale(1);
-
-    span {
-      display: block;
-    }
-  }
 }
-
-
 // Click hamburger
 .js-m-nav--toggled {
-  .m-stars {
-    filter: blur(3px);
+    .m-stars {
+        filter: blur(3px);
 
-    &__content {
-      transform: translate3d(-50%, -80%, 0);
+        &__content {
+            transform: translate3d(-50%, -20%, 0);
+            top: 20%;
+        }
+
+        &__headline {
+            transform: scale(.75);
+            filter: blur(3px);
+        }
     }
-    &__headline {
-      transform: scale(.75);
-      filter: blur(3px);
-    }
-  }
 }
-
 @media (min-width: $bp-tablet) {
-  .m-stars {
-    &__content {
-      transition: none;
-    }
+    .m-stars {
+        &__content {
+            // transition: none;
+        }
 
-    &__headline {
-      font-size: 3.5rem;
+        &__headline {
+            font-size: 3.5rem;
+        }
     }
-  }
 }
-
 @media (min-width: $bp-desktop-sm) {
-  .m-stars {
-    &__headline {
-      font-size: 4.5rem;
+    .m-stars {
+        &__headline {
+            font-size: 4.5rem;
+        }
     }
-  }
+}
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
 }
 
-@keyframes animStar {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2000px);
-  }
+
+// /* Scale the logo down and maintain it centered */
+@keyframes logoAppear {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

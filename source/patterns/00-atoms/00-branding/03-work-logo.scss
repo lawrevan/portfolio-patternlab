@@ -1,0 +1,22 @@
+.a-logo-work {
+    max-width: 100%;
+    height: auto;
+
+    &--white {
+        filter: invert(1) hue-rotate(210deg);
+    }
+
+    &--joyome {
+        width: 175px;
+    }
+
+    &--bedstu {
+        width: 215px;
+        position: relative;
+        right: 7px;
+    }
+
+    &--gates {
+        width: 115px;
+    }
+}

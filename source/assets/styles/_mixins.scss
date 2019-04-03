@@ -65,7 +65,12 @@
         font-size: ($tablet / $font-size-base) * 1rem;
     }
 
-    @media (min-width: ($bp-desktop)) {
+    // @media (min-width: ($bp-desktop)) {
+    //     font-size: $desktop;
+    //     font-size: ($desktop / $font-size-base) * 1rem;
+    // }
+
+    @media (min-width: ($lg)) {
         font-size: $desktop;
         font-size: ($desktop / $font-size-base) * 1rem;
     }
@@ -73,7 +78,7 @@
 
 /*
  * Transition all with ease
- * 
+ *
  */
 
 @mixin transition($duration) {

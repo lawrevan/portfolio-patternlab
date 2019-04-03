@@ -1,4 +1,9 @@
+AOS.init({
+    duration: 1000
+});
+
 var Gorilla = {};
+
 (function() {
     Gorilla.Utils = new Utils();
 })();

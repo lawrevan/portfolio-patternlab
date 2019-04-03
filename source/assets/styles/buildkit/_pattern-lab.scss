@@ -1,40 +1,47 @@
-.pl-c-text-passage ul li,
-.pl-c-tabs__list-item {
-	padding: 0;
+.pl-c-tabs__list-item,
+.pl-c-text-passage ul li {
+    padding: 0;
 
-	&:before {
-		content: '';
-	}
-}
-
-// STYLE GUIDE SPECIFIC
-
-// Atoms
-#atoms-scroll-up-button,
-#atoms-scroll-down-button,
-#atoms-chevron-up,
-#atoms-chevron-down {
-  [class^="a-chevron"] {
-    position: relative;
-
-    &:before,
-    &:after {
-      background: $color-black;
+    &:before {
+        content: '';
     }
-  }
+}
+// STYLE GUIDE SPECIFIC
+// Atoms
+#atoms-chevron-down,
+#atoms-chevron-up,
+#atoms-scroll-down-button,
+#atoms-scroll-up-button {
+    [class^="a-chevron"] {
+        position: relative;
+
+        &:after,
+        &:before {
+            background: $color-black;
+        }
+    }
 }
 
+#atoms-work-logo {
+    .a-logo-work {
+        filter: invert(1) hue-rotate(210deg);
+
+        &--white {
+            filter: none;
+        }
+    }
+}
 // Molecules
+
 #molecules-nav {
-  .m-nav {
-    position: relative;
-    background: $color-brand-primary;
-    opacity: 1;
-  }
+    .m-nav {
+        position: relative;
+        background: $color-brand-primary;
+        opacity: 1;
+    }
 }
 
-
-#molecules-nav-toggle{
+#molecules-nav-toggle {
     .m-nav-toggle {
         display: block;
         position: relative;
@@ -44,10 +51,9 @@
         }
     }
 }
-
 // Components
 #components-footer {
-  .c-footer {
-    position: relative;
-  }
+    .c-footer {
+        position: relative;
+    }
 }

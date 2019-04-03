@@ -1,5 +1,5 @@
 .c-work-list {
-    background-color: $color-brand-primary;
+    background-color: $color-brand-secondary;
 
     &__container {
         @extend %container;
@@ -8,7 +8,7 @@
     }
 
     &__title {
-
+        text-align: center;
     }
 
     &__list {

@@ -1,39 +1,42 @@
 %heading1 {
 	@include fontSize(56px, 70px, 80px);
-	font-family: $font-family-primary;
-	font-weight: $font-weight-bold;
-	line-height: 1.2;
-	text-align: left;
-	margin: 0 0 10px 0;
-	padding: 0;
-  @extend %gradient-text;
-}
-
-%heading2 {
-	@include fontSize(40px, 60px, 70px);
-	font-family: $font-family-primary;
-	font-weight: $font-weight-bold;
-	line-height: 1.2;
-	text-align: left;
-	margin: 0 0 10px 0;
-	padding: 0;
-  @extend %gradient-text;
-}
-
-%heading3 {
-	@include fontSize(20px, 24px, 30px);
-	font-family: $font-family-primary;
+	font-family: $font-family-headings;
 	font-weight: $font-weight-normal;
 	line-height: 1.2;
 	text-align: left;
 	margin: 0 0 10px 0;
 	padding: 0;
-  @extend %gradient-text;
+  // @extend %gradient-text;
+    color: $color-headings;
+}
+
+%heading2 {
+	@include fontSize(40px, 60px, 70px);
+	font-family: $font-family-headings;
+	font-weight: $font-weight-normal;
+	line-height: 1.2;
+	text-align: left;
+	margin: 0 0 10px 0;
+	padding: 0;
+  // @extend %gradient-text;
+    color: $color-headings;
+}
+
+%heading3 {
+	@include fontSize(20px, 24px, 24px);
+	font-family: $font-playfair;
+	font-weight: $font-weight-normal;
+	line-height: 1.2;
+	text-align: left;
+	margin: 0 0 10px 0;
+	padding: 0;
+  // @extend %gradient-text;
+    color: $color-headings;
 }
 
 %heading4 {
 	@include fontSize(24px, 32px, 40px);
-	font-family: $font-family-primary;
+	font-family: $font-family-headings;
 	font-weight: $font-weight-normal;
 	line-height: 1.2;
 	color: $color-black;
@@ -45,7 +48,7 @@
 %heading5 {
 	@include fontSize(18px, 24px, 24px);
 	font-family: $font-family-secondary;
-	font-weight: $font-weight-bold;
+	font-weight: $font-weight-normal;
 	line-height: 1.2;
 	color: $color-black;
 	text-align: left;

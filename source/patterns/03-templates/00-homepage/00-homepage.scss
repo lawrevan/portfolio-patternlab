@@ -3,12 +3,16 @@
   z-index: $z-index-base;
   height: auto;
   min-height: 100vh;
-  margin-bottom: 37rem;
+  margin-bottom: 41rem;
   background: $color-brand-primary;
 }
 
 @media (min-width: $bp-tablet) {
   .t-homepage {
-    margin-bottom: 31rem;
+    margin-bottom: 35rem;
   }
+}
+
+[data-aos="fade-in"] {
+    transition-delay: 3s;
 }

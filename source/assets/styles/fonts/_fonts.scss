@@ -163,3 +163,25 @@
   src: local('SF Pro Text Bold'), local('SFProText-Bold'),
     url('../fonts/SF_Pro/SF-Pro-Text-Bold.otf') format('opentype');
 }
+// Helios Rounded
+@font-face {
+    font-family: 'Helios Rounded';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Helios Rounded'), local('Helios-Rounded'), url("../fonts/helios/Helios-Rounded.woff") format('woff'), url("../fonts/helios/Helios-Rounded.otf") format('opentype');
+}
+// Helios Regular
+@font-face {
+    font-family: 'Helios Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Helios Regular'), local('Helios-Regular'), url("../fonts/helios/Helios-Regular.woff") format('woff'), url("../fonts/helios/Helios-Regular.otf") format('opentype');
+}
+// Rubik Regular
+@font-face {
+    font-family: 'Rubik Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Rubik Regular'), local('Rubik-Regular'), url('../fonts/rubik/Rubik-Regular.ttf') format('truetype');
+     /* Safari, Android, iOS */
+}
