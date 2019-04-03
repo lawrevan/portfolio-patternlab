@@ -4,15 +4,27 @@
     position: absolute;
 }
 
+.banner {
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translate3d(-50%,0,0);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    &__content {
+        color: $color-primary;
+    }
+}
+
 .close-button {
-    display: block;
+    display: inline-block;
     width: 40px;
     height: 40px;
-    position: relative;
+    position: absolute;
     overflow: hidden;
-    transform: translate3d(20px,0,0);
-    opacity: 0;
-    transition: opacity .3s ease-out, transform .3s ease-out;
+    top: -40px;
+    transform: translate3d(20px,-60px,0);
+    transition: transform 1s ease-out;
 
     > div {
         position: relative;
@@ -23,6 +35,8 @@
         height: 20px;
         position: relative;
         overflow: hidden;
+        opacity: 0;
+        transition: opacity 1s ease-out;
 
         &:after,
         &:before {
@@ -99,24 +113,7 @@
         }
     }
 }
-@keyframes starWarsContent {
-    from {
-        opacity: 1;
-        transform: rotateX(80deg) scaleY(0.1) translateY(800px);
-    }
 
-    50% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 0;
-    }
-
-    to {
-        transform: rotateX(80deg) scaleY(0.1) translateY(-300px);
-    }
-}
 // Create Molecule for this and add to mustahce.
 .m-grid {
     display: flex;

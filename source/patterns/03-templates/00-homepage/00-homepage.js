@@ -54,25 +54,25 @@ if (linkWork) {
         e.preventDefault();
 
         //Closes nav right away
-        // header.classList.remove('js-m-nav--toggled')
+        header.classList.remove('js-m-nav--toggled')
 
         //Closes nav with 2 second delay
-        if (header.classList.contains('js-m-nav--toggled')) {
-            setTimeout(() => {
-                header.classList.remove('js-m-nav--toggled')
-            }, 2000);
-        }
+        // if (header.classList.contains('js-m-nav--toggled')) {
+        //     setTimeout(() => {
+        //         header.classList.remove('js-m-nav--toggled')
+        //     }, 2000);
+        // }
 
         // target = link text
         let clickedLink = e.target.innerText;
 
         switch (clickedLink) {
             case "About":
+
             //     zenscroll.to(sectionAbout, 1750);
             //     break;
 
             header.classList.add('js-about-active');
-
             break;
 
             case "Work":
@@ -95,7 +95,7 @@ sectionAbout.addEventListener('click', () => {
     }
 });
 // Listen for star wars text animation end to display nav
-sectionAbout.addEventListener('animationend', closeAbout);
+aboutContent.addEventListener('animationend', closeAbout);
 // Close About by Clicking X
 aboutBtnClose.addEventListener('click', closeAbout);
 

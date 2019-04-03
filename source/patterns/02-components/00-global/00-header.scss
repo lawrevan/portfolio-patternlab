@@ -4,7 +4,7 @@
 
     &.js-about-active {
         .m-stars {
-            animation: fronte 2000ms linear forwards 2000ms;
+            animation: fronte 1000ms linear forwards 2000ms;
 
             &__content {
                 opacity: 0;
@@ -17,7 +17,6 @@
             }
         }
 
-
         .m-star-wars__content {
             animation-name: starWarsContent;
             animation-timing-function: linear;
@@ -27,11 +26,25 @@
             animation-play-state: running;
         }
 
-        .close-button {
-            transform: translate3d(20px,20px,0);
-            opacity: 1;
+        .m-nav-toggle {
+            display: none;
         }
 
+        .close-button {
+            transform: translate3d(20px,60px,0);
+
+            &-block {
+                opacity: 1;
+            }
+        }
+
+        .banner {
+            animation: prelude 8000ms linear forwards;
+            transform: translate3d(-50%, 100px, 0);
+            opacity: 1;
+
+            &__content {}
+        }
     }
 
     &.js-about-paused {
@@ -46,6 +59,24 @@
                 animation-play-state: paused;
             }
         }
+    }
+}
+@keyframes starWarsContent {
+    from {
+        opacity: 1;
+        transform: rotateX(80deg) scaleY(0.1) translateY(800px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateX(80deg) scaleY(0.1) translateY(-300px);
     }
 }
 @keyframes logoDisappear {
@@ -70,5 +101,22 @@
 
     to {
         z-index: $z-index-front;
+    }
+}
+@keyframes prelude {
+    from {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
