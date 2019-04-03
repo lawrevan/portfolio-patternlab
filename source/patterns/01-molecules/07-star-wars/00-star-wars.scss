@@ -1,27 +1,55 @@
 .m-star-wars {
-  position: absolute;
-  height: 100vh;
-  padding: 10px;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  left: 0;
-  color: $color-primary;
-  perspective: 60px;
-  perspective-origin: center 0;
-  letter-spacing: 1px;
-  text-shadow: 0 0 1px $color-primary;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
+    position: absolute;
+    height: 100vh;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    color: $color-primary;
+    perspective: 60px;
+    perspective-origin: center 0;
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px $color-primary;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
 
-  &__content {
-      animation: none;
-      opacity: 0;
-      font-size: 30px;
-      line-height: 35px;
-      cursor: default;
-      width: 45%;
-      margin: 0 auto;
-  }
+    &__content {
+        animation: none;
+        opacity: 0;
+        font-size: 30px;
+        line-height: 35px;
+        cursor: default;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+@media (min-width: $bp-tablet) {
+    .m-star-wars {
+        width: 75%;
+        &__content {
+
+        }
+    }
+}
+@media (min-width: $bp-desktop-sm) {
+    .m-star-wars {
+        width: 70%;
+
+        &__content {
+            width: 45%;
+        }
+    }
+}
+@media (min-width: $bp-desktop) {
+    .m-star-wars {
+        &__content {}
+    }
+}
+@media (min-width: $bp-desktop-lg) {
+    .m-star-wars {
+        width: 50%;
+        &__content {}
+    }
 }

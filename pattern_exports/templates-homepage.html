@@ -13,37 +13,43 @@
     <div class="m-stars__star m-stars__star--1"></div>
     <div class="m-stars__star m-stars__star--2"></div>
     <div class="m-stars__star m-stars__star--3"></div>
-    
-    <div class="c-about">
+
+    <div class="m-about">
     <div class="m-star-wars">
     <div class="m-star-wars__content">
         Larry Evans
         <span>Front End Web Developer</span>
         <p>I'm a multi-disciplinary designer who is always learning and seeking to improve. Multi-disciplinary allows me to plan like an engineer, create like
-        an artist and think like a customer. My creative
-        curiosity of staying up-to-date allows me to adapt to a rapidly evolving industry without being left behind.</p>
-      <p>Design really isn't just how it looks; the key to tackle a challenging problem through effective design thinking is to balance between the visual
-          details and the usefulness it provides to the end
-          user.</p>
-    </div>
-</div>
+            an artist and think like a customer. My creative
+            curiosity of staying up-to-date allows me to adapt to a rapidly evolving industry without being left behind.
+            Design really isn't just how it looks; the key to tackle a challenging problem through effective design thinking is to balance between the visual
+            details and the usefulness it provides to the end
+            user.</p>
 
-    <a href="#" class="close-button c-about__btn-close">
-    <div class="in">
-      <div class="close-button-block"></div>
-      <div class="close-button-block"></div>
     </div>
-    <div class="out">
-      <div class="close-button-block"></div>
-      <div class="close-button-block"></div>
-    </div>
-  </a>
-  <div class="banner">
-      <p class="banner__content">
-          Click to Pause
-      </p>
-  </div>
+    <!-- m-star-wars__content -->
 </div>
+<!-- m-star-wars -->
+
+    <a href="#" class="m-about__close">
+        <div class="m-about__close-top">
+            <div class="m-about__close-block"></div>
+            <div class="m-about__close-block"></div>
+        </div>
+        <div class="m-about__close-bottom">
+            <div class="m-about__close-block"></div>
+            <div class="m-about__close-block"></div>
+        </div>
+    </a>
+    <!-- m-about__close -->
+    <div class="m-about__banner">
+        <p class="m-about__content">
+            Click to Pause
+        </p>
+    </div>
+    <!-- m-about__banner -->
+</div>
+<!-- m-about -->
 
 </div>
 <!-- m-stars -->
@@ -136,50 +142,56 @@
                 <h2 class="c-parallax-bgs__title" data-aos="a-fade-in-up" data-aos-duration="1000">Skills</h2>
             </header>
 
-            <div class="m-grid m-grid--skills">
-                <div class="m-grid__column" data-aos="fade-in-up">
-                    <h3 class="m-grid__title">Languages</h3>
-                    <ul class="m-grid__list">
-                        <li class="m-grid__list-item">HTML5</li>
-                        <li class="m-grid__list-item">CSS3, SCSS, LESS</li>
-                        <li class="m-grid__list-item">JavaScript (ES6)</li>
-                        <li class="m-grid__list-item">Mustache</li>
-                        <li class="m-grid__list-item">JSON</li>
-                    </ul>
-                </div>
-                <div class="m-grid__column" data-aos="fade-in-up">
-                    <h3 class="m-grid__title">Methods &amp; Tools</h3>
-                    <ul class="m-grid__list">
-                        <li class="m-grid__list-item">BEM, OOCSS</li>
-                        <li class="m-grid__list-item">Atomic Design</li>
-                        <li class="m-grid__list-item">Webpack, Gulp</li>
-                        <li class="m-grid__list-item">Pattern Lab</li>
-                        <li class="m-grid__list-item">NPM, Node.js</li>
-                        <li class="m-grid__list-item">Git</li>
-                    </ul>
-                </div>
-                <div class="m-grid__column" data-aos="fade-in-up">
-                    <h3 class="m-grid__title">Frameworks &amp; Libs</h3>
-                    <ul class="m-grid__list">
-                        <li class="m-grid__list-item">React, jQuery</li>
-                        <li class="m-grid__list-item">Bootstrap</li>
-                        <li class="m-grid__list-item">HubSpot</li>
-                        <li class="m-grid__list-item">Light CMS</li>
-                        <li class="m-grid__list-item">Business Catalyst</li>
-                        <li class="m-grid__list-item">Wordpress</li>
-                    </ul>
-                </div>
-                <div class="m-grid__column" data-aos="fade-in-up">
-                    <h3 class="m-grid__title">Additional</h3>
-                    <ul class="m-grid__list">
-                        <li class="m-grid__list-item">Responsive Web Design</li>
-                        <li class="m-grid__list-item">Google Tag Manager</li>
-                        <li class="m-grid__list-item">Google Analytics</li>
-                        <li class="m-grid__list-item">Sketch, Photoshop</li>
-                        <li class="m-grid__list-item">Invision</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="m-grid">
+    <div class="m-grid__column" data-aos="fade-in-up">
+        <h3 class="m-grid__title">Languages</h3>
+        <ul class="m-grid__list">
+            <li class="m-grid__list-item">HTML5</li>
+            <li class="m-grid__list-item">CSS3, SCSS, LESS</li>
+            <li class="m-grid__list-item">JavaScript (ES6)</li>
+            <li class="m-grid__list-item">Mustache</li>
+            <li class="m-grid__list-item">JSON</li>
+        </ul>
+    </div>
+    <!-- m-grid__column -->
+    <div class="m-grid__column" data-aos="fade-in-up">
+        <h3 class="m-grid__title">Methods &amp; Tools</h3>
+        <ul class="m-grid__list">
+            <li class="m-grid__list-item">BEM, OOCSS</li>
+            <li class="m-grid__list-item">Atomic Design</li>
+            <li class="m-grid__list-item">Webpack, Gulp</li>
+            <li class="m-grid__list-item">Pattern Lab</li>
+            <li class="m-grid__list-item">NPM, Node.js</li>
+            <li class="m-grid__list-item">Git</li>
+        </ul>
+    </div>
+    <!-- m-grid__column -->
+    <div class="m-grid__column" data-aos="fade-in-up">
+        <h3 class="m-grid__title">Frameworks &amp; Libs</h3>
+        <ul class="m-grid__list">
+            <li class="m-grid__list-item">React, jQuery</li>
+            <li class="m-grid__list-item">Bootstrap</li>
+            <li class="m-grid__list-item">HubSpot</li>
+            <li class="m-grid__list-item">Light CMS</li>
+            <li class="m-grid__list-item">Business Catalyst</li>
+            <li class="m-grid__list-item">Wordpress</li>
+        </ul>
+    </div>
+    <!-- m-grid__column -->
+    <div class="m-grid__column" data-aos="fade-in-up">
+        <h3 class="m-grid__title">Additional</h3>
+        <ul class="m-grid__list">
+            <li class="m-grid__list-item">Responsive Web Design</li>
+            <li class="m-grid__list-item">Google Tag Manager</li>
+            <li class="m-grid__list-item">Google Analytics</li>
+            <li class="m-grid__list-item">Sketch, Photoshop</li>
+            <li class="m-grid__list-item">Invision</li>
+        </ul>
+    </div>
+    <!-- m-grid__column -->
+</div>
+<!-- m-grid -->
+
 
         </div>
         <!-- c-parallax-bgs__content -->

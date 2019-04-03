@@ -5,7 +5,6 @@
     z-index: $z-index-top;
     position: absolute;
     display: block;
-    @include transition(0.5s);
 
     &:hover {
         cursor: pointer;

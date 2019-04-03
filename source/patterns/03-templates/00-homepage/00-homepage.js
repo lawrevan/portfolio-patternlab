@@ -31,14 +31,14 @@ const scrollUpBtn = document.querySelector(".a-btn--scroll-up");
 
 // Scroll Targets
 const sectionParallax = document.querySelector('.c-parallax-bgs--top');
-const sectionAbout = document.querySelector('.c-about');
+const sectionAbout = document.querySelector('.m-about');
 const sectionWork = document.querySelector('.c-banner-scroll');
 const sectionContact = document.querySelector('.js-contact-section');
 const sectionTop = document.querySelector(".t-homesection");
 
 
 //About Content
-const aboutBtnClose = document.querySelector('.c-about__btn-close');
+const aboutBtnClose = document.querySelector('.m-about__close');
 
 const aboutContent = document.querySelector('.m-star-wars__content');
 
